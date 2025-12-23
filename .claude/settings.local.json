@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(findstr:*)",
+      "Bash(powershell -Command \"(Get-Content ''''C:\\BusNetwork\\assets\\index-B6OA1am8.js'''')[227]\")",
+      "Bash(powershell -Command \"(Get-Content ''C:\\BusNetwork\\assets\\index-B6OA1am8.js'')[227].Substring(0, 2000)\")",
+      "Bash(powershell:*)"
+    ]
+  }
+}
