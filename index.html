@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BusFleetAI - Intelligent Bus Fleet Management</title>
+    <meta name="description" content="BusFleetAI - Intelligent Bus Fleet Management Solutions" />
+    <meta name="author" content="BusFleetAI" />
+
+    <meta property="og:title" content="BusFleetAI" />
+    <meta property="og:description" content="BusFleetAI - Intelligent Bus Fleet Management Solutions" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/logo.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@BusFleetAI" />
+    <meta name="twitter:image" content="/images/logo.png" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <script type="module" crossorigin src="/assets/index-B6OA1am8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D3t_mO8X.css">
+    <style>
+      /* Make header permanently white */
+      header, nav, [class*="fixed"][class*="top-0"] {
+        background-color: white !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+      }
+      /* Make nav links dark on white header */
+      header a, nav a {
+        color: hsl(213, 37%, 24%) !important;
+      }
+      header a:hover, nav a:hover {
+        color: hsl(17, 100%, 60%) !important;
+      }
+      /* Keep the CTA button orange */
+      header a[class*="bg-accent"], nav a[class*="bg-accent"],
+      header button[class*="bg-accent"], nav button[class*="bg-accent"] {
+        color: white !important;
+      }
+
+      /* Replace header logo with BusFleetAI logo */
+      .w-10.h-10.rounded-lg.bg-primary {
+        background: url('/assets/logo.png') center/contain no-repeat !important;
+        width: 400px !important;
+        height: 200px !important;
+        border-radius: 0 !important;
+      }
+      .w-10.h-10.rounded-lg.bg-primary svg {
+        display: none !important;
+      }
+      /* Hide the "Bus Fleet AI" text next to logo since logo already has text */
+      .w-10.h-10.rounded-lg.bg-primary + span {
+        display: none !important;
+      }
+
+      /* Fix for integrations section being cut off by wave - only on large screens */
+      @media (min-width: 1440px) {
+        /* Extend the hero section to give more room above the wave */
+        .gradient-hero {
+          padding-bottom: 75px !important;
+        }
+        /* Ensure integrations text and logos stay visible above wave */
+        .text-white\/60.text-sm.mb-4,
+        .text-white\/60.text-sm.mb-4 + div {
+          position: relative;
+          z-index: 20;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script>
+      // Intercept all form submissions and send to Formspree
+      document.addEventListener('submit', async function(e) {
+        const form = e.target;
+        if (form.tagName === 'FORM') {
+          e.preventDefault();
+
+          // Gather form data
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          // Also try to get data from input fields if FormData is empty
+          if (Object.keys(data).length === 0) {
+            const inputs = form.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+              if (input.name || input.id) {
+                data[input.name || input.id] = input.value;
+              }
+            });
+          }
+
+          try {
+            const response = await fetch('https://formspree.io/f/xgowpdbz', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+              alert('Thank you! Your message has been sent.');
+              form.reset();
+            } else {
+              alert('There was an error sending your message. Please try again.');
+            }
+          } catch (error) {
+            console.error('Form submission error:', error);
+            alert('There was an error sending your message. Please try again.');
+          }
+        }
+      }, true);
+    </script>
+  </body>
+</html>
