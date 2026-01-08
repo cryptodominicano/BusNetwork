@@ -157,6 +157,19 @@
         width: 0 !important;
         height: 0 !important;
       }
+      /* Hide fixed elements in bottom-right corner inside #root (badge/toast containers) */
+      #root > div.fixed.bottom-4.right-4,
+      #root > div.fixed.bottom-2.right-2,
+      #root div.fixed.z-50.bottom-4.right-4,
+      #root div.fixed.z-\[100\],
+      .fixed.bottom-4.right-4.z-50,
+      div.fixed[class*="bottom"][class*="right"]:not(header):not(nav) {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
     </style>
   </head>
 
