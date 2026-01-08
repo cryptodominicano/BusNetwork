@@ -170,6 +170,18 @@
         height: 0 !important;
         overflow: hidden !important;
       }
+      /* Hide toast notification container (OL element with z-[100]) */
+      ol.fixed,
+      ol[class*="z-\[100\]"],
+      ol.z-\[100\],
+      ol[class*="fixed"][class*="top-0"],
+      ol[class*="flex-col-reverse"] {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
     </style>
   </head>
 
