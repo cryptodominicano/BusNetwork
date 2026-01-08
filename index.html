@@ -144,6 +144,13 @@
         display: none !important;
         visibility: hidden !important;
       }
+
+      /* Hide toast/badge container inside #root (won't affect Radix portals which are on body) */
+      #root > div.fixed.bottom-4.right-4,
+      #root > div.fixed.bottom-2.right-2 {
+        display: none !important;
+        visibility: hidden !important;
+      }
     </style>
   </head>
 
