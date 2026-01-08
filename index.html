@@ -135,7 +135,7 @@
         }
       }
 
-      /* Hide Lovable badge/watermark only - be very specific to avoid breaking dropdowns */
+      /* Hide Lovable badge/watermark only */
       #lovable-badge,
       [id*="lovable"],
       [class*="lovable"],
@@ -145,29 +145,9 @@
         visibility: hidden !important;
       }
 
-      /* Hide any fixed element in bottom-right corner (Lovable badge container) */
+      /* Hide elements outside #root (Lovable injects outside) */
       body > div:not(#root) {
         display: none !important;
-      }
-      /* Target the specific Lovable badge wrapper that may have white background */
-      div[style*="position: fixed"][style*="bottom"],
-      div[style*="position:fixed"][style*="bottom"] {
-        display: none !important;
-        visibility: hidden !important;
-        width: 0 !important;
-        height: 0 !important;
-      }
-      /* Hide Lovable badge containers - very specific selectors only */
-      #root > div.fixed.bottom-4.right-4:not([data-radix-popper-content-wrapper]),
-      #root > div.fixed.bottom-2.right-2:not([data-radix-popper-content-wrapper]) {
-        display: none !important;
-        visibility: hidden !important;
-      }
-      /* Hide toast notification container (OL element with specific toast classes) */
-      ol.fixed.z-\[100\],
-      ol.fixed[class*="flex-col-reverse"][class*="max-h-screen"] {
-        display: none !important;
-        visibility: hidden !important;
       }
     </style>
   </head>
