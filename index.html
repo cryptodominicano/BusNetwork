@@ -157,30 +157,17 @@
         width: 0 !important;
         height: 0 !important;
       }
-      /* Hide fixed elements in bottom-right corner inside #root (badge/toast containers) */
-      #root > div.fixed.bottom-4.right-4,
-      #root > div.fixed.bottom-2.right-2,
-      #root div.fixed.z-50.bottom-4.right-4,
-      #root div.fixed.z-\[100\],
-      .fixed.bottom-4.right-4.z-50,
-      div.fixed[class*="bottom"][class*="right"]:not(header):not(nav) {
+      /* Hide Lovable badge containers - very specific selectors only */
+      #root > div.fixed.bottom-4.right-4:not([data-radix-popper-content-wrapper]),
+      #root > div.fixed.bottom-2.right-2:not([data-radix-popper-content-wrapper]) {
         display: none !important;
         visibility: hidden !important;
-        width: 0 !important;
-        height: 0 !important;
-        overflow: hidden !important;
       }
-      /* Hide toast notification container (OL element with z-[100]) */
-      ol.fixed,
-      ol[class*="z-\[100\]"],
-      ol.z-\[100\],
-      ol[class*="fixed"][class*="top-0"],
-      ol[class*="flex-col-reverse"] {
+      /* Hide toast notification container (OL element with specific toast classes) */
+      ol.fixed.z-\[100\],
+      ol.fixed[class*="flex-col-reverse"][class*="max-h-screen"] {
         display: none !important;
         visibility: hidden !important;
-        width: 0 !important;
-        height: 0 !important;
-        overflow: hidden !important;
       }
     </style>
   </head>
