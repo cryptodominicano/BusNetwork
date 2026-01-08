@@ -103,48 +103,14 @@
         }
       }
 
-      /* Hide Lovable badge/watermark and any overlay elements */
+      /* Hide Lovable badge/watermark only - be very specific to avoid breaking dropdowns */
       #lovable-badge,
       [id*="lovable"],
       [class*="lovable"],
       a[href*="lovable.dev"],
-      a[href*="lovable.app"],
-      div[style*="fixed"][style*="bottom"][style*="right"] > a[href*="lovable"],
-      body > div:last-of-type:not(#root) a[href*="lovable"],
-      /* Hide any floating badge in bottom-right corner */
-      body > div:not(#root):last-of-type,
-      [class*="fixed"][class*="bottom-4"][class*="right-4"],
-      [class*="fixed"][class*="bottom-2"][class*="right-2"],
-      /* Hide iframes and overlays that might be badges */
-      body > iframe,
-      body > div:not(#root),
-      iframe[style*="fixed"],
-      iframe[style*="bottom"],
-      iframe[style*="right"],
-      div[style*="z-index: 9999"],
-      div[style*="z-index:9999"],
-      div[style*="position: fixed"][style*="bottom"],
-      div[style*="position:fixed"][style*="bottom"],
-      /* Target badge inside React root - fixed z-50 with external link */
-      #root > div.fixed.z-50,
-      #root > div.z-50.fixed,
-      .fixed.z-50.bottom-4.right-4,
-      .fixed.bottom-4.right-4.z-50,
-      div.fixed.bottom-4.right-4,
-      a[target="_blank"][rel*="noopener"].fixed,
-      .z-50 a[target="_blank"],
-      #root > div:last-child:not(main):not(section):not(header):not(footer),
-      /* Toast/notification container (the actual floating box) */
-      ol.fixed,
-      ol[tabindex="-1"],
-      ol.flex-col-reverse,
-      ol.max-h-screen {
+      a[href*="lovable.app"] {
         display: none !important;
         visibility: hidden !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-        width: 0 !important;
-        height: 0 !important;
       }
     </style>
   </head>
