@@ -144,6 +144,19 @@
         display: none !important;
         visibility: hidden !important;
       }
+
+      /* Hide any fixed element in bottom-right corner (Lovable badge container) */
+      body > div:not(#root) {
+        display: none !important;
+      }
+      /* Target the specific Lovable badge wrapper that may have white background */
+      div[style*="position: fixed"][style*="bottom"],
+      div[style*="position:fixed"][style*="bottom"] {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
     </style>
   </head>
 
@@ -151,21 +164,31 @@
     <div id="root"></div>
 
     <script>
-      // Remove Lovable badge only - runs once after page loads, no MutationObserver
+      // Remove Lovable badge and any elements outside #root
       function removeBadge() {
-        // Only remove iframes (often used for badges)
+        const root = document.getElementById('root');
+
+        // Remove all direct children of body except #root and scripts
+        document.querySelectorAll('body > *').forEach(el => {
+          if (el.id !== 'root' && el.tagName !== 'SCRIPT' && el.tagName !== 'STYLE') {
+            el.remove();
+          }
+        });
+
+        // Remove iframes
         document.querySelectorAll('body > iframe').forEach(el => el.remove());
 
         // Remove elements with lovable in href
         document.querySelectorAll('a[href*="lovable"]').forEach(el => {
-          const parent = el.closest('div.fixed');
-          if (parent) parent.remove();
-          else el.remove();
+          const parent = el.closest('div.fixed') || el.closest('div');
+          if (parent && !root.contains(parent)) parent.remove();
+          else if (!root.contains(el)) el.remove();
         });
       }
 
-      // Run only after page is fully loaded - no observer to avoid conflicts
+      // Run after page is fully loaded
       window.addEventListener('load', () => {
+        setTimeout(removeBadge, 1000);
         setTimeout(removeBadge, 2000);
         setTimeout(removeBadge, 5000);
       });
