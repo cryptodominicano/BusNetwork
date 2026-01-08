@@ -153,53 +153,24 @@
     <div id="root"></div>
 
     <script>
-      // Remove any floating badge/watermark/overlay in bottom-right corner
+      // Remove Lovable badge only - runs once after page loads, no MutationObserver
       function removeBadge() {
-        const root = document.getElementById('root');
+        // Only remove iframes (often used for badges)
+        document.querySelectorAll('body > iframe').forEach(el => el.remove());
 
-        // Remove ALL direct children of body except #root and scripts/styles
-        document.querySelectorAll('body > *').forEach(el => {
-          if (el !== root && el.tagName !== 'SCRIPT' && el.tagName !== 'STYLE') {
-            el.remove();
-          }
-        });
-
-        // Remove any iframes anywhere
-        document.querySelectorAll('iframe').forEach(el => el.remove());
-
-        // Check ALL elements for computed position: fixed in bottom-right area
-        document.querySelectorAll('*').forEach(el => {
-          try {
-            const style = window.getComputedStyle(el);
-            if (style.position === 'fixed') {
-              const rect = el.getBoundingClientRect();
-              // Is it in the bottom-right corner?
-              const isBottomRight = rect.top > window.innerHeight - 200 && rect.left > window.innerWidth - 300;
-              // Is it NOT the header (which is at top)?
-              const isNotHeader = rect.top > 100;
-
-              if (isBottomRight && isNotHeader) {
-                el.remove();
-              }
-            }
-          } catch(e) {}
+        // Remove elements with lovable in href
+        document.querySelectorAll('a[href*="lovable"]').forEach(el => {
+          const parent = el.closest('div.fixed');
+          if (parent) parent.remove();
+          else el.remove();
         });
       }
 
-      // Run immediately, on load, and periodically to catch dynamically added elements
-      removeBadge();
-      document.addEventListener('DOMContentLoaded', removeBadge);
+      // Run only after page is fully loaded - no observer to avoid conflicts
       window.addEventListener('load', () => {
-        removeBadge();
-        setTimeout(removeBadge, 100);
-        setTimeout(removeBadge, 500);
-        setTimeout(removeBadge, 1000);
         setTimeout(removeBadge, 2000);
         setTimeout(removeBadge, 5000);
       });
-      // Also use MutationObserver to catch any dynamically added elements
-      const observer = new MutationObserver(() => removeBadge());
-      observer.observe(document.body, { childList: true, subtree: true });
 
       // Intercept all form submissions and send to Formspree
       document.addEventListener('submit', async function(e) {
