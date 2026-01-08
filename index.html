@@ -316,12 +316,24 @@
         }
       }
 
+      // Update testimonial attribution
+      function updateTestimonial() {
+        // Find the cite element with the old attribution
+        document.querySelectorAll('cite').forEach(cite => {
+          if (cite.textContent.includes('Fleet Manager, Charter Bus Company')) {
+            cite.innerHTML = '— Patrick Goebel, <a href="https://baronsbus.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Barons Bus Company</a>';
+          }
+        });
+      }
+
       // Only run after everything is loaded
       window.addEventListener('load', function() {
         setTimeout(addWhatsAppLinks, 1000);
         setTimeout(addWhatsAppLinks, 2000);
         setTimeout(addQuestionsField, 1000);
         setTimeout(addQuestionsField, 2000);
+        setTimeout(updateTestimonial, 1000);
+        setTimeout(updateTestimonial, 2000);
       });
     </script>
   </body>
