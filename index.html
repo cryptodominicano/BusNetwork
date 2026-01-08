@@ -176,58 +176,32 @@
     <div id="root"></div>
 
     <script>
-      // Remove Lovable badge and any fixed elements in bottom-right corner
+      // Remove Lovable badge only - very targeted approach
       function removeBadge() {
-        const root = document.getElementById('root');
-
-        // Remove all direct children of body except #root and scripts
+        // Remove direct children of body except #root and scripts
         document.querySelectorAll('body > *').forEach(el => {
           if (el.id !== 'root' && el.tagName !== 'SCRIPT' && el.tagName !== 'STYLE') {
             el.remove();
           }
         });
 
-        // Remove iframes
+        // Remove iframes (Lovable uses iframes)
         document.querySelectorAll('iframe').forEach(el => el.remove());
 
-        // Remove elements with lovable in href
+        // Remove elements with lovable in href only
         document.querySelectorAll('a[href*="lovable"]').forEach(el => {
-          const parent = el.closest('div.fixed') || el.closest('div');
-          if (parent) parent.remove();
-          else el.remove();
-        });
-
-        // Find and hide ANY element in the bottom-right corner
-        document.querySelectorAll('*').forEach(el => {
-          try {
-            const style = window.getComputedStyle(el);
-            if (style.position === 'fixed') {
-              const rect = el.getBoundingClientRect();
-              // Check if element is in bottom-right area (within 250px of corner)
-              const isBottomRight = rect.bottom > window.innerHeight - 150 &&
-                                    rect.right > window.innerWidth - 250;
-              const isSmall = rect.width < 300 && rect.height < 150;
-              const isNotHeader = rect.top > 100;
-
-              if (isBottomRight && isSmall && isNotHeader) {
-                el.style.display = 'none';
-                el.style.visibility = 'hidden';
-                el.style.opacity = '0';
-                el.style.width = '0';
-                el.style.height = '0';
-              }
-            }
-          } catch(e) {}
+          const parent = el.closest('div.fixed');
+          if (parent && !parent.querySelector('[data-radix-popper-content-wrapper]')) {
+            parent.remove();
+          } else {
+            el.remove();
+          }
         });
       }
 
-      // Run after page is fully loaded and repeatedly
+      // Run once after page loads
       window.addEventListener('load', () => {
-        setTimeout(removeBadge, 500);
         setTimeout(removeBadge, 1000);
-        setTimeout(removeBadge, 2000);
-        setTimeout(removeBadge, 3000);
-        setTimeout(removeBadge, 5000);
       });
 
       // Intercept all form submissions and send to Formspree
