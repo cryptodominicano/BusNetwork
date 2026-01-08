@@ -142,6 +142,12 @@ document.querySelectorAll('*').forEach(el => {
 - Validation for empty submissions
 - Error logging with specific Formspree error messages
 
+### Testimonial Update
+- **Attribution**: Patrick Goebel, Barons Bus Company
+- **Link**: https://baronsbus.com/
+- Uses `updateTestimonial()` function to find and replace the `<cite>` element text
+- Permission granted to use their name
+
 ## Important Notes
 
 ### Form Submission (for React/Lovable sites)
