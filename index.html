@@ -575,6 +575,14 @@
         document.querySelectorAll('a[href*="tel:"]').forEach(el => el.remove());
         document.querySelectorAll('a[href*="wa.me"]').forEach(el => el.remove());
 
+        // Replace Pricing nav link with Blog in React-rendered header
+        document.querySelectorAll('header a, nav a').forEach(el => {
+          if (el.textContent.trim() === 'Pricing' && el.getAttribute('href') && el.getAttribute('href').includes('pricing')) {
+            el.href = '/blog/what-is-dvir';
+            el.textContent = 'Blog';
+          }
+        });
+
         // Replace old email with new
         document.querySelectorAll('a[href*="GoldCoastAI"], a[href*="goldcoastai"]').forEach(el => {
           el.href = 'mailto:Isaias@InteliaRD.com';
