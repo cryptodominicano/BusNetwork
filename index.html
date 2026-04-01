@@ -156,6 +156,13 @@
         display: none !important;
         visibility: hidden !important;
       }
+
+      /* Hide phone number links rendered by React */
+      a[href*="tel:+1610"],
+      a[href*="tel:610"],
+      a[href*="wa.me/1610"] {
+        display: none !important;
+      }
     </style>
 
     <script type="application/ld+json">
@@ -574,10 +581,56 @@
         insertAfter.parentNode.insertBefore(section, insertAfter.nextSibling);
       }
 
+      // Remove phone numbers, old contact info, and Gold Coast references from React-rendered content
+      function cleanUpReactContent() {
+        // Remove any phone number links
+        document.querySelectorAll('a[href*="tel:"]').forEach(el => el.remove());
+        document.querySelectorAll('a[href*="wa.me"]').forEach(el => el.remove());
+
+        // Replace old email with new
+        document.querySelectorAll('a[href*="GoldCoastAI"], a[href*="goldcoastai"]').forEach(el => {
+          el.href = 'mailto:Isaias@InteliaRD.com';
+          el.textContent = 'Isaias@InteliaRD.com';
+        });
+
+        // Walk all text nodes and clean up phone numbers and old references
+        var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+        var node;
+        while (node = walker.nextNode()) {
+          // Remove phone number patterns
+          if (node.textContent.match(/\(610\)\s*357[- ]?5363|610[\-.]357[\-.]5363/)) {
+            node.textContent = node.textContent.replace(/\(610\)\s*357[- ]?5363|610[\-.]357[\-.]5363/g, '');
+          }
+          // Remove "Or call us directly" type text
+          if (node.textContent.match(/Or call[^.]*$/i)) {
+            node.textContent = node.textContent.replace(/Or call[^.]*$/i, '');
+          }
+          // Replace Gold Coast references
+          if (node.textContent.includes('Gold Coast AI Automations')) {
+            node.textContent = node.textContent.replace('A Gold Coast AI Automations Company', '');
+            node.textContent = node.textContent.replace('Gold Coast AI Automations', '');
+          }
+          if (node.textContent.includes('GoldCoastAI')) {
+            node.textContent = node.textContent.replace(/Support@GoldCoastAI\.pro/gi, 'Isaias@InteliaRD.com');
+            node.textContent = node.textContent.replace(/GoldCoastAI\.pro/gi, '');
+          }
+        }
+
+        // Remove parent elements that are now empty after phone removal
+        document.querySelectorAll('p, span, div').forEach(el => {
+          if (el.textContent.trim() === '' && el.children.length === 0 && el.closest('footer')) {
+            el.remove();
+          }
+        });
+      }
+
       // Only run after everything is loaded
       window.addEventListener('load', function() {
         setTimeout(addEmailLinks, 1000);
         setTimeout(addEmailLinks, 2000);
+        setTimeout(cleanUpReactContent, 1000);
+        setTimeout(cleanUpReactContent, 2000);
+        setTimeout(cleanUpReactContent, 3000);
         setTimeout(addQuestionsField, 1000);
         setTimeout(addQuestionsField, 2000);
         setTimeout(updateTestimonial, 1000);
