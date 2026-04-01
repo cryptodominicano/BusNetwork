@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Much Is Bus Fleet Idle Time Costing You? 2026 | BusFleetAI</title>
+    <meta name="description" content="A bus idling one hour burns 0.8 gallons of diesel. Across a 50-bus fleet that adds up to $29,000 a year. Here is how to find it and stop it automatically." />
+    <meta name="author" content="BusFleetAI" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.busfleetai.com/blog/bus-fleet-idle-time" />
+    <meta property="og:title" content="How Much Is Bus Fleet Idle Time Costing You? 2026 | BusFleetAI" />
+    <meta property="og:description" content="A bus idling for one hour burns roughly 0.8 gallons of diesel. Across a 50-bus fleet that adds up fast." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.busfleetai.com/blog/bus-fleet-idle-time" />
+    <meta property="og:image" content="https://www.busfleetai.com/assets/open-graph.png" />
+    <meta property="og:site_name" content="BusFleetAI" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@BusFleetAI" />
+    <meta name="twitter:title" content="How Much Is Bus Fleet Idle Time Costing You? 2026 | BusFleetAI" />
+    <meta name="twitter:image" content="https://www.busfleetai.com/assets/open-graph.png" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="stylesheet" crossorigin href="/assets/index-D3t_mO8X.css">
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: Inter, system-ui, -apple-system, sans-serif; color: hsl(213, 20%, 35%); line-height: 1.6; background: #fff; }
+      a { color: inherit; text-decoration: none; }
+      .site-header { position: sticky; top: 0; z-index: 100; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 0 24px; }
+      .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+      .header-logo img { height: 48px; width: auto; }
+      .header-nav { display: flex; align-items: center; gap: 32px; }
+      .header-nav a { font-size: 0.95rem; font-weight: 500; color: hsl(213, 37%, 24%); transition: color 0.2s; }
+      .header-nav a:hover { color: hsl(17, 100%, 60%); }
+      .header-nav .nav-cta { background: hsl(17, 100%, 60%); color: white !important; padding: 10px 22px; border-radius: 8px; font-weight: 600; }
+      .header-nav .nav-cta:hover { background: hsl(17, 100%, 50%); }
+      .whatsapp-link { display: inline-flex; align-items: center; gap: 6px; color: hsl(213, 37%, 24%) !important; font-weight: 500; font-size: 14px; }
+      .whatsapp-link:hover { color: #25D366 !important; }
+      .whatsapp-link svg { width: 20px; height: 20px; fill: #25D366; }
+      .breadcrumb { font-size: 0.85rem; color: hsl(213, 20%, 55%); max-width: 780px; margin: 24px auto 0; padding: 0 24px; }
+      .breadcrumb a { color: hsl(17, 100%, 60%); }
+      .breadcrumb a:hover { text-decoration: underline; }
+      .breadcrumb span { margin: 0 6px; }
+      .article { max-width: 780px; margin: 0 auto; padding: 32px 24px 64px; }
+      .article h1 { font-size: 2.25rem; font-weight: 800; line-height: 1.2; color: hsl(213, 37%, 24%); margin-bottom: 12px; }
+      .byline { font-size: 0.85rem; color: hsl(213, 20%, 55%); margin-bottom: 28px; }
+      .article .geo { font-size: 1.1rem; line-height: 1.75; margin-bottom: 32px; }
+      .article h2 { font-size: 1.5rem; font-weight: 700; color: hsl(213, 37%, 24%); margin: 40px 0 16px; }
+      .article p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
+      .btn-primary { display: inline-block; background: hsl(17, 100%, 60%); color: white; padding: 14px 32px; border-radius: 8px; font-size: 1.05rem; font-weight: 700; }
+      .btn-primary:hover { background: hsl(17, 100%, 50%); }
+      .cost-table { width: 100%; border-collapse: collapse; margin: 20px 0 12px; font-size: 0.95rem; }
+      .cost-table th { background: hsl(213, 37%, 24%); color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+      .cost-table td { padding: 12px 16px; border-bottom: 1px solid hsl(210, 30%, 90%); }
+      .cost-table tr:nth-child(even) td { background: #f8fafc; }
+      .table-note { font-size: 0.85rem; color: hsl(213, 20%, 55%); font-style: italic; margin-bottom: 28px; }
+      .related-box { background: #f8fafc; border: 1px solid hsl(210, 30%, 88%); border-radius: 12px; padding: 28px; margin: 40px 0; }
+      .related-box h3 { font-size: 1.15rem; font-weight: 700; color: hsl(213, 37%, 24%); margin-bottom: 16px; }
+      .related-box ul { list-style: none; }
+      .related-box li { margin-bottom: 10px; }
+      .related-box a { color: hsl(17, 100%, 60%); font-weight: 600; }
+      .related-box a:hover { text-decoration: underline; }
+      .section { padding: 64px 24px; }
+      .section-inner { max-width: 780px; margin: 0 auto; }
+      .section h2 { font-size: 1.75rem; font-weight: 700; color: hsl(213, 37%, 24%); text-align: center; margin-bottom: 32px; }
+      .section-alt { background: #f8fafc; }
+      .faq-list { max-width: 780px; margin: 0 auto; }
+      .faq-item { border: 1px solid hsl(210, 30%, 88%); border-radius: 10px; margin-bottom: 10px; background: white; overflow: hidden; }
+      .faq-btn { width: 100%; text-align: left; padding: 18px 20px; background: none; border: none; cursor: pointer; font-size: 1rem; font-weight: 600; color: hsl(213, 37%, 24%); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+      .faq-btn .icon { font-size: 1.4rem; flex-shrink: 0; }
+      .faq-answer { display: none; padding: 0 20px 18px; font-size: 0.95rem; line-height: 1.75; color: hsl(213, 20%, 40%); }
+      .cta-section { text-align: center; padding: 64px 24px; background: hsl(213, 37%, 24%); color: white; }
+      .cta-section h2 { color: white; margin-bottom: 16px; font-size: 1.75rem; font-weight: 700; }
+      .cta-section p { max-width: 560px; margin: 0 auto 32px; opacity: 0.85; font-size: 1.05rem; }
+      .cta-section .btn-primary { margin-bottom: 16px; }
+      .cta-secondary { font-size: 0.95rem; opacity: 0.75; }
+      .cta-secondary a { color: white; text-decoration: underline; }
+      .site-footer { background: hsl(213, 37%, 20%); color: rgba(255,255,255,0.7); padding: 40px 24px; text-align: center; font-size: 0.85rem; }
+      .site-footer a { color: rgba(255,255,255,0.85); }
+      .site-footer a:hover { color: white; }
+      @media (max-width: 768px) { .article h1 { font-size: 1.7rem; } .header-nav { gap: 16px; } }
+      @media (max-width: 480px) { .header-nav a:not(.nav-cta):not(.whatsapp-link) { display: none; } .cost-table { font-size: 0.85rem; } .cost-table th, .cost-table td { padding: 8px 10px; } }
+    </style>
+
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Article", "headline": "How Much Is Bus Fleet Idle Time Costing You? 2026", "datePublished": "2026-03-31", "dateModified": "2026-03-31", "author": { "@type": "Organization", "name": "BusFleetAI" }, "publisher": { "@type": "Organization", "name": "BusFleetAI", "logo": { "@type": "ImageObject", "url": "https://www.busfleetai.com/assets/logo.png" } }, "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.busfleetai.com/blog/bus-fleet-idle-time" } }
+    </script>
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "How much fuel does an idling bus consume?", "acceptedAnswer": { "@type": "Answer", "text": "A typical diesel bus consumes approximately 0.8 gallons of fuel per hour of idle time. At $4/gallon, a 50-bus fleet idling 30 minutes per day wastes over $29,000 annually." } },
+      { "@type": "Question", "name": "Why do buses idle so much?", "acceptedAnswer": { "@type": "Answer", "text": "Common causes include drivers arriving early, climate control during loading, post-route idling, and drivers leaving vehicles running during breaks." } },
+      { "@type": "Question", "name": "How can bus fleets reduce idle time?", "acceptedAnswer": { "@type": "Answer", "text": "Combine automated monitoring with driver coaching. BusFleetAI flags buses exceeding idle thresholds and includes idle data in daily summaries." } },
+      { "@type": "Question", "name": "Does reducing idle time affect bus engine life?", "acceptedAnswer": { "@type": "Answer", "text": "Prolonged idling actually accelerates engine wear and carbon buildup. Reducing idle time improves fuel economy and engine longevity simultaneously." } },
+      { "@type": "Question", "name": "How does BusFleetAI monitor bus idle time?", "acceptedAnswer": { "@type": "Answer", "text": "BusFleetAI connects to Saucon TDS, Zonar, or Geotab and sends alerts when a bus exceeds your defined idle threshold. Events are also compiled in daily reports." } }
+    ] }
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.busfleetai.com/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.busfleetai.com/blog/"},
+      {"@type":"ListItem","position":3,"name":"Bus Fleet Idle Time","item":"https://www.busfleetai.com/blog/bus-fleet-idle-time"}
+    ]}</script>
+  </head>
+
+  <body>
+    <header class="site-header"><div class="header-inner"><a href="/" class="header-logo"><img src="/assets/logo.png" alt="BusFleetAI" /></a><nav class="header-nav"><a href="/">Home</a><a href="/#features">Features</a><a href="/pricing">Pricing</a><a class="whatsapp-link" href="https://wa.me/16103575363" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>(610) 357-5363</span></a><a href="/#contact" class="nav-cta">Get Started</a></nav></div></header>
+
+    <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/blog">Blog</a><span>&rsaquo;</span>Bus Fleet Idle Time</div>
+
+    <article class="article">
+      <h1>How Much Is Bus Fleet Idle Time Costing You?</h1>
+      <div class="byline">By BusFleetAI | March 31, 2026 | 4 min read</div>
+
+      <p class="geo">A diesel bus idling for one hour burns approximately 0.8 gallons of fuel. At current diesel prices, a 50-bus fleet where every bus idles 30 minutes per day is spending over $29,000 per year on fuel that moves no one anywhere. Automated idle monitoring identifies exactly which buses, routes, and drivers account for that waste &mdash; and alerts managers in real time when idle thresholds are exceeded.</p>
+
+      <img src="https://images.unsplash.com/photo-1743593331916-ac2a3f2349bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTIzNTR8MHwxfHNlYXJjaHwxfHxidXMlMjBwYXJrZWQlMjBpZGxpbmclMjBleGhhdXN0JTIwZGVwb3R8ZW58MHwwfHx8MTc3NTAxMjIwOHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Bus parked and idling at depot — BusFleetAI monitors idle time and alerts fleet managers automatically" loading="eager" width="100%" style="border-radius: 12px; object-fit: cover; max-height: 480px; margin-bottom: 32px;" />
+
+      <h2>The Hidden Cost Most Bus Fleets Are Not Measuring</h2>
+      <p>Fuel costs are tracked at the fleet level &mdash; total gallons, total spend &mdash; but rarely broken down by behavior. Idle time is one of the largest controllable fuel expenses in bus operations, and most fleets have no visibility into it at all. The data exists in your telematics system. It just never gets turned into an alert or a report that changes behavior.</p>
+
+      <h2>Where Idle Time Actually Comes From</h2>
+      <p>Pre-departure waiting is the most common source &mdash; drivers arrive early, start the bus, and wait with the engine running. Climate control during loading accounts for significant idle time on longer routes. Post-route idling before returning to the depot is another consistent contributor. Each of these behaviors is individually small and collectively expensive.</p>
+
+      <h2>What the Numbers Look Like at Fleet Scale</h2>
+      <table class="cost-table">
+        <thead><tr><th>Fleet Size</th><th>Daily Idle / Bus</th><th>Daily Fuel Waste</th><th>Annual Cost</th></tr></thead>
+        <tbody>
+          <tr><td>20 buses</td><td>30 min</td><td>8 gallons</td><td>~$11,680</td></tr>
+          <tr><td>50 buses</td><td>30 min</td><td>20 gallons</td><td>~$29,200</td></tr>
+          <tr><td>100 buses</td><td>30 min</td><td>40 gallons</td><td>~$58,400</td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">Assumes 0.8 gal/hr idle rate, $4.00/gal diesel, 365 operating days.</p>
+
+      <h2>How Automated Idle Monitoring Works</h2>
+      <p>BusFleetAI connects to <a href="/saucon-tds" style="color:hsl(17,100%,60%);font-weight:600;">Saucon TDS</a>, <a href="/zonar" style="color:hsl(17,100%,60%);font-weight:600;">Zonar</a>, or <a href="/geotab" style="color:hsl(17,100%,60%);font-weight:600;">Geotab</a> and monitors vehicle activity in real time. You define the idle threshold &mdash; 10 minutes, 15 minutes, whatever fits your operation. When a bus exceeds it, your designated recipients receive an alert with the vehicle ID, location, and duration. Idle events are also compiled in the daily summary report so you can track trends over time and target coaching where it has the most impact.</p>
+
+      <div class="related-box">
+        <h3>Related Resources</h3>
+        <ul>
+          <li><a href="/#features">Bus Fleet Monitoring Features &rarr;</a></li>
+          <li><a href="/charter-bus">Charter Bus Fleet Monitoring &rarr;</a></li>
+          <li><a href="/blog/what-is-dvir">What Is DVIR? &rarr;</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <section class="section section-alt"><div class="section-inner"><h2>Frequently Asked Questions</h2><div class="faq-list" id="faq-accordion"></div></div></section>
+
+    <section class="cta-section">
+      <h2>Find Out Where Your Fuel Budget Is Going</h2>
+      <p>BusFleetAI monitors idle time across your entire fleet and alerts you in real time. Works with Saucon TDS, Zonar, and Geotab. No hardware. Live in 72 hours.</p>
+      <a href="/#contact" class="btn-primary">Get Your Free Fleet Assessment &rarr;</a>
+      <div class="cta-secondary">Or call <a href="tel:+16103575363">(610) 357-5363</a></div>
+    </section>
+
+    <footer class="site-footer"><p>&copy; 2026 BusFleetAI. All rights reserved. | <a href="/">Home</a> | <a href="/pricing">Pricing</a> | <a href="/#contact">Contact</a></p></footer>
+
+    <script>
+      (function() {
+        var faqs = [
+          { q: 'How much fuel does an idling bus consume?', a: 'A typical diesel bus consumes approximately 0.8 gallons of fuel per hour of idle time. At $4 per gallon, that is $3.20 per bus per idle hour. Across a fleet of 50 buses idling an average of 30 minutes per day, that adds up to over $29,000 in wasted fuel annually.' },
+          { q: 'Why do buses idle so much?', a: 'Common causes include drivers arriving early and waiting for departure time, climate control running while loading or unloading passengers, post-route idling before returning to the depot, and drivers leaving vehicles running during breaks. Many of these behaviors are habitual and go unnoticed without automated monitoring.' },
+          { q: 'How can bus fleets reduce idle time?', a: 'The most effective approaches combine automated monitoring with driver coaching. BusFleetAI flags buses that exceed your defined idle threshold and includes idle data in daily summary reports. Fleet managers can identify which drivers and routes account for the most idle time and address the behavior directly.' },
+          { q: 'Does reducing idle time affect bus engine life?', a: 'Contrary to common belief, extended idling does not protect diesel engines \u2014 modern diesel engines are designed to operate under load, and prolonged idling can actually accelerate engine wear, increase carbon buildup, and shorten component life. Reducing idle time improves fuel economy and engine longevity simultaneously.' },
+          { q: 'How does BusFleetAI monitor bus idle time?', a: 'BusFleetAI connects to your existing fleet platform \u2014 Saucon TDS, Zonar, or Geotab \u2014 and monitors vehicle activity data. When a bus exceeds your defined idle threshold, an alert is sent to your designated recipients. Idle events are also included in the daily operations summary report.' }
+        ];
+        var container = document.getElementById('faq-accordion'); if (!container) return;
+        faqs.forEach(function(item) {
+          var div = document.createElement('div'); div.className = 'faq-item';
+          var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'faq-btn';
+          btn.innerHTML = '<span>' + item.q + '</span><span class="icon">+</span>';
+          var ans = document.createElement('div'); ans.className = 'faq-answer'; ans.textContent = item.a;
+          btn.addEventListener('click', function() { var open = ans.style.display === 'block'; ans.style.display = open ? 'none' : 'block'; btn.querySelector('.icon').textContent = open ? '+' : '\u2212'; });
+          div.appendChild(btn); div.appendChild(ans); container.appendChild(div);
+        });
+      })();
+    </script>
+  </body>
+</html>
