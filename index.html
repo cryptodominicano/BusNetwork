@@ -327,6 +327,13 @@
             console.log('Form response:', response.status, result);
 
             if (response.ok) {
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_lead', {
+                  event_category: 'Contact Form',
+                  event_label: 'Fleet Assessment Request',
+                  value: 1
+                });
+              }
               alert('Thank you! Your message has been sent.');
               form.reset();
             } else {
