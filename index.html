@@ -624,6 +624,60 @@
         });
       }
 
+      // Replace React footer with full site navigation
+      function replaceFooter() {
+        var footer = document.querySelector('footer');
+        if (!footer || footer.dataset.replaced) return;
+        footer.dataset.replaced = 'true';
+
+        footer.innerHTML = '';
+        footer.style.cssText = 'background:hsl(213,37%,20%); color:rgba(255,255,255,0.75); padding:48px 24px 32px; font-size:0.9rem; line-height:1.7;';
+
+        var inner = document.createElement('div');
+        inner.style.cssText = 'max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:32px;';
+
+        // Column 1 — Brand
+        var col1 = document.createElement('div');
+        col1.innerHTML = '<div style="font-size:1.15rem;font-weight:700;color:white;margin-bottom:12px;">BusFleetAI</div>' +
+          '<p style="margin-bottom:12px;">AI-powered bus fleet monitoring. No hardware. Live in 72 hours.</p>' +
+          '<a href="mailto:Isaias@InteliaRD.com" style="color:hsl(17,100%,60%);text-decoration:none;font-weight:600;">Isaias@InteliaRD.com</a>';
+
+        // Column 2 — Features
+        var col2 = document.createElement('div');
+        col2.innerHTML = '<div style="font-size:0.95rem;font-weight:700;color:white;margin-bottom:12px;">Features</div>' +
+          '<a href="/driver-no-show-alerts" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">Driver No-Show Alerts</a>' +
+          '<a href="/dvir-compliance" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">DVIR Compliance</a>' +
+          '<a href="/charter-bus" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">Charter Bus Monitoring</a>';
+
+        // Column 3 — Integrations
+        var col3 = document.createElement('div');
+        col3.innerHTML = '<div style="font-size:0.95rem;font-weight:700;color:white;margin-bottom:12px;">Integrations</div>' +
+          '<a href="/saucon-tds" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">Saucon TDS</a>' +
+          '<a href="/zonar" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">Zonar</a>' +
+          '<a href="/geotab" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">Geotab</a>';
+
+        // Column 4 — Blog
+        var col4 = document.createElement('div');
+        col4.innerHTML = '<div style="font-size:0.95rem;font-weight:700;color:white;margin-bottom:12px;">Blog</div>' +
+          '<a href="/blog/what-is-dvir" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">What Is DVIR?</a>' +
+          '<a href="/blog/bus-driver-no-show" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">Driver No-Show Guide</a>' +
+          '<a href="/blog/charter-bus-safety" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">Charter Bus Safety</a>' +
+          '<a href="/blog/bus-fleet-idle-time" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">Fleet Idle Time Costs</a>' +
+          '<a href="/blog/saucon-tds-guide" style="display:block;color:rgba(255,255,255,0.75);text-decoration:none;margin-bottom:6px;">Saucon TDS Guide</a>';
+
+        inner.appendChild(col1);
+        inner.appendChild(col2);
+        inner.appendChild(col3);
+        inner.appendChild(col4);
+        footer.appendChild(inner);
+
+        // Copyright bar
+        var copy = document.createElement('div');
+        copy.style.cssText = 'max-width:1100px; margin:32px auto 0; padding-top:20px; border-top:1px solid rgba(255,255,255,0.15); text-align:center; font-size:0.8rem; color:rgba(255,255,255,0.5);';
+        copy.innerHTML = '&copy; 2026 BusFleetAI. All rights reserved. | <a href="/" style="color:rgba(255,255,255,0.6);text-decoration:none;">Home</a> | <a href="/pricing" style="color:rgba(255,255,255,0.6);text-decoration:none;">Pricing</a> | <a href="/#contact" style="color:rgba(255,255,255,0.6);text-decoration:none;">Contact</a>';
+        footer.appendChild(copy);
+      }
+
       // Only run after everything is loaded
       window.addEventListener('load', function() {
         setTimeout(addEmailLinks, 1000);
@@ -631,6 +685,8 @@
         setTimeout(cleanUpReactContent, 1000);
         setTimeout(cleanUpReactContent, 2000);
         setTimeout(cleanUpReactContent, 3000);
+        setTimeout(replaceFooter, 1500);
+        setTimeout(replaceFooter, 2500);
         setTimeout(addQuestionsField, 1000);
         setTimeout(addQuestionsField, 2000);
         setTimeout(updateTestimonial, 1000);
