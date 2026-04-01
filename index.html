@@ -359,19 +359,7 @@
           }
         }
 
-        // Footer
-        const footer = document.querySelector('footer');
-        if (footer && !footer.querySelector('.email-link-footer')) {
-          const col = footer.querySelector('div > div > div');
-          if (col) {
-            const link = document.createElement('a');
-            link.href = 'mailto:Isaias@InteliaRD.com';
-            link.className = 'email-link-footer';
-            link.style.marginTop = '12px';
-            link.textContent = 'Isaias@InteliaRD.com';
-            col.appendChild(link);
-          }
-        }
+        // Footer is handled by replaceFooter() — no injection needed here
       }
 
       // Add "Additional Questions" textarea to the contact form
@@ -674,7 +662,7 @@
         // Copyright bar
         var copy = document.createElement('div');
         copy.style.cssText = 'max-width:1100px; margin:32px auto 0; padding-top:20px; border-top:1px solid rgba(255,255,255,0.15); text-align:center; font-size:0.8rem; color:rgba(255,255,255,0.5);';
-        copy.innerHTML = '&copy; 2026 BusFleetAI. All rights reserved. | <a href="/" style="color:rgba(255,255,255,0.6);text-decoration:none;">Home</a> | <a href="/pricing" style="color:rgba(255,255,255,0.6);text-decoration:none;">Pricing</a> | <a href="/#contact" style="color:rgba(255,255,255,0.6);text-decoration:none;">Contact</a>';
+        copy.innerHTML = '&copy; 2026 BusFleetAI. All rights reserved. | <a href="/" style="color:rgba(255,255,255,0.6);text-decoration:none;">Home</a> | <a href="/pricing" style="color:rgba(255,255,255,0.6);text-decoration:none;">Pricing</a> | <a href="/#contact" style="color:rgba(255,255,255,0.6);text-decoration:none;">Contact</a> | <a href="/privacy" style="color:rgba(255,255,255,0.6);text-decoration:none;">Privacy Policy</a> | <a href="/terms" style="color:rgba(255,255,255,0.6);text-decoration:none;">Terms of Service</a>';
         footer.appendChild(copy);
       }
 
