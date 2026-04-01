@@ -93,7 +93,9 @@
         { "@type": "Question", "name": "Does BusFleetAI replace Zonar?", "acceptedAnswer": { "@type": "Answer", "text": "No. BusFleetAI connects to Zonar and adds automated alerts for driver no-shows, speed violations, and DVIR compliance. Zonar remains your primary fleet platform." } },
         { "@type": "Question", "name": "What does BusFleetAI add to a Zonar system?", "acceptedAnswer": { "@type": "Answer", "text": "BusFleetAI adds driver no-show alerts within 5 minutes, real-time speed violation notifications, DVIR compliance tracking, and daily operations summaries — all delivered by SMS and email." } },
         { "@type": "Question", "name": "How does the Zonar and BusFleetAI integration work?", "acceptedAnswer": { "@type": "Answer", "text": "BusFleetAI connects to your Zonar platform, reads fleet data in real time, and sends automated alerts when thresholds are crossed. No hardware changes required." } },
-        { "@type": "Question", "name": "How long does Zonar integration take?", "acceptedAnswer": { "@type": "Answer", "text": "Most fleets are live within 72 hours. No hardware installation required." } }
+        { "@type": "Question", "name": "How long does Zonar integration take?", "acceptedAnswer": { "@type": "Answer", "text": "Most fleets are live within 72 hours. No hardware installation required." } },
+        { "@type": "Question", "name": "What is the Zonar OMI API?", "acceptedAnswer": { "@type": "Answer", "text": "The Zonar OMI (Open Mobile Interface) is Zonar's open API that gives third-party systems access to the full telematics dataset collected by Zonar's V4 hardware, including real-time GPS, speed, EVIR inspection data, hours of service records, fuel usage, and zone event history." } },
+        { "@type": "Question", "name": "Can BusFleetAI monitor EVIR inspection compliance on Zonar?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. BusFleetAI reads Zonar's EVIR (Electronic Vehicle Inspection Report) data and sends automated alerts when a pre-trip or post-trip inspection has not been completed within your required window." } }
       ]
     }
     </script>
@@ -174,6 +176,43 @@
           <li>Excessive idle time monitoring</li>
           <li>Daily operations summary delivered to your inbox</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <h2>What Data BusFleetAI Reads From the Zonar API</h2>
+        <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;">Zonar provides an open API called the OMI (Open Mobile Interface) that gives third-party systems access to the full telematics dataset collected by Zonar's V4 hardware. BusFleetAI uses this API to monitor the data Zonar is already collecting from your fleet and convert it into automated alerts and reports your operations team can act on.</p>
+        <div style="overflow:hidden;border-radius:8px;border:1px solid hsl(210,30%,88%);margin-bottom:24px;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+            <thead><tr style="background:hsl(213,37%,24%);color:white;"><th style="padding:12px 16px;text-align:left;">Zonar OMI API Data</th><th style="padding:12px 16px;text-align:left;">Fields Available</th><th style="padding:12px 16px;text-align:left;">How BusFleetAI Uses It</th></tr></thead>
+            <tbody>
+              <tr><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">showposition current location</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Real-time GPS coordinates, speed, heading, odometer</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Powers speed violation monitoring and real-time fleet position</td></tr>
+              <tr style="background:#f8fafc;"><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Asset event history</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Trip start/end, sign-on/sign-off, ignition events, location history</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Drives driver no-show detection and daily operations summary</td></tr>
+              <tr><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">EVIR inspection data</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Electronic Vehicle Inspection Report completion, defect records, driver certification</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Powers DVIR compliance monitoring and missed inspection alerts</td></tr>
+              <tr style="background:#f8fafc;"><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Hours of Service data</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Driver duty status, available hours, HOS violations</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Enables compliance monitoring and shift duration alerts</td></tr>
+              <tr><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Fuel and idle data</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Fuel counter, fuel level, idle duration, average RPM</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Powers excessive idle alerts and fuel waste reporting</td></tr>
+              <tr style="background:#f8fafc;"><td style="padding:12px 16px;">Zone and geofence events</td><td style="padding:12px 16px;">In-zone and out-of-zone time, distance, duration</td><td style="padding:12px 16px;">Enables route deviation alerts and first pickup confirmation</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:1.05rem;line-height:1.8;">Zonar's OMI API supports both real-time polling and historical data retrieval, which allows BusFleetAI to monitor current fleet status and reconstruct event timelines for daily summary reports.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-inner">
+        <h2>Additional Automation Services Available With Zonar</h2>
+        <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;">BusFleetAI's direct access to the Zonar OMI API enables the following automation services beyond core driver monitoring:</p>
+        <div class="card-grid">
+          <div class="card"><h3>Driver No-Show Alerts (5-Minute Window)</h3><p>BusFleetAI monitors Zonar sign-on events and compares them against scheduled start times. If a driver has not checked in within your defined window, dispatch receives an SMS and email alert immediately.</p></div>
+          <div class="card"><h3>Real-Time Speed Violation Alerts</h3><p>Zonar's OMI API returns continuous speed readings per vehicle. BusFleetAI evaluates every reading and sends an instant alert when any bus exceeds your defined threshold &mdash; driver, location, and speed included.</p></div>
+          <div class="card"><h3>EVIR (DVIR) Compliance Monitoring</h3><p>Zonar's EVIR system records electronic vehicle inspections. BusFleetAI monitors inspection completion and alerts you when a pre-trip or post-trip inspection has not been filed within your required window.</p></div>
+          <div class="card"><h3>Hours of Service Compliance Alerts</h3><p>BusFleetAI reads Zonar HOS data and alerts operations when a driver is approaching or has exceeded their available hours before a violation occurs.</p></div>
+          <div class="card"><h3>Excessive Idle Monitoring</h3><p>Zonar captures idle duration and fuel consumption per vehicle. BusFleetAI flags buses idling beyond your defined threshold and includes idle data in the daily summary for driver coaching.</p></div>
+          <div class="card"><h3>Route Deviation and Geofence Alerts</h3><p>Using Zonar's zone event data, BusFleetAI detects when a vehicle departs from its assigned route or enters or exits a defined geographic area, and sends an immediate alert to dispatch.</p></div>
+        </div>
+        <p style="font-size:1.05rem;line-height:1.8;margin-top:24px;">All services configured to your thresholds and delivered to your recipients by SMS and email. Contact us to discuss which combination fits your fleet.</p>
       </div>
     </section>
 

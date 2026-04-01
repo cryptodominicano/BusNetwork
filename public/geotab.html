@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geotab Fleet Telematics Automation | BusFleetAI</title>
-    <meta name="description" content="Add automated alerts to your Geotab fleet telematics system. Monitor driver no-shows, speed violations, and DVIR compliance in real time. No hardware required." />
+    <meta name="description" content="Layer AI-powered monitoring on top of Geotab fleet telematics. Automate driver no-shows, speed violations, and DVIR compliance for your bus fleet. No hardware." />
     <meta name="author" content="BusFleetAI" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.busfleetai.com/geotab" />
 
     <meta property="og:title" content="Geotab Fleet Telematics Automation | BusFleetAI" />
-    <meta property="og:description" content="Add automated alerts to your Geotab fleet telematics system. Monitor driver no-shows, speed violations, and DVIR compliance in real time. No hardware required." />
+    <meta property="og:description" content="Layer AI-powered monitoring on top of Geotab fleet telematics. Automate driver no-shows, speed violations, and DVIR compliance for your bus fleet. No hardware." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.busfleetai.com/geotab" />
     <meta property="og:image" content="https://www.busfleetai.com/assets/open-graph.png" />
@@ -94,7 +94,9 @@
         { "@type": "Question", "name": "What alerts does BusFleetAI add to Geotab?", "acceptedAnswer": { "@type": "Answer", "text": "BusFleetAI adds driver no-show alerts within 5 minutes, real-time speed violation notifications, DVIR compliance tracking, and daily operations summaries — all delivered by SMS and email." } },
         { "@type": "Question", "name": "How does Geotab integration with BusFleetAI work?", "acceptedAnswer": { "@type": "Answer", "text": "BusFleetAI connects to your Geotab platform via API, reads fleet data in real time, and sends automated alerts when thresholds are crossed. No hardware changes required." } },
         { "@type": "Question", "name": "How quickly can we connect BusFleetAI to Geotab?", "acceptedAnswer": { "@type": "Answer", "text": "Most fleets are live within 72 hours. No hardware installation required." } },
-        { "@type": "Question", "name": "What is Geotab fleet telematics?", "acceptedAnswer": { "@type": "Answer", "text": "Geotab fleet telematics is a GPS and vehicle data system that collects real-time location, speed, engine diagnostics, driver behavior, and DVIR inspection data from buses and commercial vehicles. BusFleetAI connects to the Geotab telematics platform and adds automated alert delivery for no-shows, speed violations, and compliance gaps." } }
+        { "@type": "Question", "name": "What is Geotab fleet telematics?", "acceptedAnswer": { "@type": "Answer", "text": "Geotab fleet telematics is a GPS and vehicle data system that collects real-time location, speed, engine diagnostics, driver behavior, and DVIR inspection data from buses and commercial vehicles. BusFleetAI connects to the Geotab telematics platform and adds automated alert delivery for no-shows, speed violations, and compliance gaps that Geotab does not send natively." } },
+        { "@type": "Question", "name": "What data does BusFleetAI read from the Geotab API?", "acceptedAnswer": { "@type": "Answer", "text": "BusFleetAI reads LogRecords (GPS and speed), DriverChange events, ExceptionEvents (rule violations), DVIRLog (inspections), DutyStatusAvailability (hours of service), StatusData (engine diagnostics), and Trips data from the MyGeotab API — covering driver accountability, speed monitoring, DVIR compliance, engine health, and idle time." } },
+        { "@type": "Question", "name": "Can BusFleetAI send engine health alerts using Geotab data?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Geotab's StatusData feed exposes engine fault codes, oil temperature, battery voltage, RPM, and other diagnostics. BusFleetAI monitors these values and alerts your maintenance team when a reading indicates a potential issue before it results in a breakdown." } }
       ]
     }
     </script>
@@ -130,7 +132,7 @@
 
     <section class="hero">
       <h1>Add Automated Alerts to Your Geotab Fleet Telematics System</h1>
-      <p>Geotab fleet telematics gives bus operators GPS tracking, speed data, driver behavior monitoring, and engine diagnostics in one platform. BusFleetAI integrates with Geotab to add automated driver no-show detection, speed violation alerts, and DVIR compliance monitoring &mdash; real-time notifications that give bus fleet managers the visibility Geotab data makes possible but does not automatically deliver to your phone or inbox.</p>
+      <p>Geotab fleet telematics gives bus operators GPS tracking, speed data, driver behavior monitoring, DVIR inspection records, and engine diagnostics in one platform. BusFleetAI connects to the Geotab telematics system and adds the automated alert layer that Geotab does not provide natively &mdash; driver no-show notifications, speed violation alerts, and compliance monitoring &mdash; delivered to your team by SMS and email within 5 minutes of any threshold breach.</p>
       <a href="/#contact" class="btn-primary">Get a Free Fleet Assessment &rarr;</a>
       <img src="https://images.unsplash.com/photo-1579722176915-95d4ee62565e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTIzNTR8MHwxfHNlYXJjaHwxfHx0cmFuc3BvcnRhdGlvbiUyMGRpc3BhdGNoJTIwb3BlcmF0aW9ucyUyMG1vbml0b3J8ZW58MHwwfHx8MTc3NTAxMTEyNnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Fleet operations center — BusFleetAI adds automated alerts to your Geotab platform" loading="eager" width="100%" style="border-radius: 12px; object-fit: cover; max-height: 480px; margin-top: 32px;" />
     </section>
@@ -175,6 +177,45 @@
           <li>Excessive idle time monitoring</li>
           <li>Daily operations summary delivered to your inbox</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <h2>What Data BusFleetAI Reads From the MyGeotab API</h2>
+        <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;">Geotab provides one of the most comprehensive fleet data APIs in the industry &mdash; the MyGeotab SDK. It exposes every data point the GO device collects from the vehicle's engine and telematics system. BusFleetAI connects to the MyGeotab API and uses its data feed services to monitor your fleet continuously and deliver automated alerts and reports without anyone having to watch a screen.</p>
+        <div style="overflow:hidden;border-radius:8px;border:1px solid hsl(210,30%,88%);margin-bottom:24px;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+            <thead><tr style="background:hsl(213,37%,24%);color:white;"><th style="padding:12px 16px;text-align:left;">Geotab API Data Feed</th><th style="padding:12px 16px;text-align:left;">Data Available</th><th style="padding:12px 16px;text-align:left;">How BusFleetAI Uses It</th></tr></thead>
+            <tbody>
+              <tr><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">LogRecords</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">GPS position and speed at each recorded timestamp</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Powers real-time location monitoring and speed violation alerts</td></tr>
+              <tr style="background:#f8fafc;"><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">DriverChange</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Driver identification and sign-on/sign-off events</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Drives driver no-show detection against scheduled start times</td></tr>
+              <tr><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">ExceptionEvents</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Rule violations including speeding, harsh braking, idling, seatbelt, and after-hours driving</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Triggers speed and safety violation alerts in real time</td></tr>
+              <tr style="background:#f8fafc;"><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">DVIRLog</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Pre-trip and post-trip inspection reports, defect records, driver certification status</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Powers DVIR compliance monitoring and missed inspection alerts</td></tr>
+              <tr><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">DutyStatusAvailability</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Driver hours of service remaining and duty status changes</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Enables HOS compliance monitoring and shift duration alerts</td></tr>
+              <tr style="background:#f8fafc;"><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">StatusData</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Engine diagnostics including RPM, fuel level, odometer, engine hours, battery, oil temperature</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Powers predictive maintenance alerts and engine health monitoring</td></tr>
+              <tr><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Trips</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Trip start/end times, distance, duration, and idle time per trip</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Powers daily summary reports and idle time analysis</td></tr>
+              <tr style="background:#f8fafc;"><td style="padding:12px 16px;">DeviceStatusInfo</td><td style="padding:12px 16px;">Current vehicle location, speed, driver updated in near real time</td><td style="padding:12px 16px;">Real-time fleet status monitoring</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:1.05rem;line-height:1.8;">Geotab notes that the MyGeotab SDK is the same API Geotab itself uses internally &mdash; meaning it exposes everything in the platform. BusFleetAI uses the Data Feed interface for continuous streaming of changes as they occur, delivering monitoring with no manual review required.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-inner">
+        <h2>Additional Automation Services Available With Geotab</h2>
+        <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;">Because the MyGeotab API exposes the most complete dataset of the three platforms BusFleetAI integrates with, the following services are available for Geotab users:</p>
+        <div class="card-grid">
+          <div class="card"><h3>Driver No-Show Alerts (5-Minute Window)</h3><p>BusFleetAI reads Geotab DriverChange events and compares them against scheduled start times. If a driver has not signed on within your defined window, an SMS and email alert goes to dispatch immediately.</p></div>
+          <div class="card"><h3>Real-Time Speed Violation Alerts</h3><p>BusFleetAI reads LogRecord and ExceptionEvent data from MyGeotab and sends an instant alert when any vehicle exceeds your defined speed threshold &mdash; driver name, vehicle ID, location, and exact speed included.</p></div>
+          <div class="card"><h3>DVIR Compliance Monitoring</h3><p>BusFleetAI reads Geotab DVIRLog data and alerts your team when a pre-trip or post-trip inspection has not been filed on schedule. Defect records are included in the daily summary report.</p></div>
+          <div class="card"><h3>Engine Health and Predictive Maintenance Alerts</h3><p>Geotab StatusData exposes engine fault codes, oil temperature, battery voltage, and more. BusFleetAI monitors these values and alerts your maintenance team when a reading indicates an issue before it becomes a breakdown.</p></div>
+          <div class="card"><h3>Hours of Service Compliance Monitoring</h3><p>BusFleetAI reads DutyStatusAvailability data from MyGeotab and alerts operations when a driver is approaching or has exceeded their HOS limits before a violation is recorded.</p></div>
+          <div class="card"><h3>Idle Time and Fuel Waste Reporting</h3><p>BusFleetAI reads trip and exception data from MyGeotab to identify excessive idle time per vehicle and driver. Idle events are flagged in real time and compiled in the daily summary for targeted coaching.</p></div>
+        </div>
+        <p style="font-size:1.05rem;line-height:1.8;margin-top:24px;">All services are configured to your fleet's specific rules and delivered to the recipients you define by SMS and email. Contact us to discuss which combination fits your Geotab operation.</p>
       </div>
     </section>
 

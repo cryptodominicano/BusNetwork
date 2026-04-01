@@ -93,7 +93,9 @@
         { "@type": "Question", "name": "Does BusFleetAI replace Saucon TDS?", "acceptedAnswer": { "@type": "Answer", "text": "No. BusFleetAI connects to Saucon TDS and adds automated alerts for driver no-shows, speed violations, and DVIR compliance. It does not replace or modify Saucon TDS." } },
         { "@type": "Question", "name": "What alerts does BusFleetAI add to Saucon TDS?", "acceptedAnswer": { "@type": "Answer", "text": "BusFleetAI adds driver no-show alerts within 5 minutes, real-time speed violation notifications, DVIR compliance tracking, first pickup confirmation, excessive idle monitoring, and daily operations summaries." } },
         { "@type": "Question", "name": "How long does Saucon TDS integration take?", "acceptedAnswer": { "@type": "Answer", "text": "Most fleets are live within 72 hours. No hardware installation required." } },
-        { "@type": "Question", "name": "Do drivers need to change anything when using Saucon TDS with BusFleetAI?", "acceptedAnswer": { "@type": "Answer", "text": "No. Drivers continue using Saucon TDS exactly as they do today. BusFleetAI monitors data in the background with zero changes to driver workflows." } }
+        { "@type": "Question", "name": "Do drivers need to change anything when using Saucon TDS with BusFleetAI?", "acceptedAnswer": { "@type": "Answer", "text": "No. Drivers continue using Saucon TDS exactly as they do today. BusFleetAI monitors data in the background with zero changes to driver workflows." } },
+        { "@type": "Question", "name": "What API services does BusFleetAI use from Saucon TDS?", "acceptedAnswer": { "@type": "Answer", "text": "BusFleetAI connects to four Saucon TDS API services: the Asset Location Service for real-time GPS and speed data, the Asset History Service for 24-hour vehicle event logs, the Engine Stats Service for engine lifetime values, and the Predicted Status Data Service for scheduled versus actual route arrival times." } },
+        { "@type": "Question", "name": "Can BusFleetAI automate IFTA mileage reporting for Saucon TDS fleets?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Saucon TDS Asset History Service returns state-by-state mileage per vehicle. BusFleetAI compiles this automatically and generates IFTA quarterly reports, eliminating manual mileage logging for fleets operating across state lines." } }
       ]
     }
     </script>
@@ -174,6 +176,41 @@
           <li>Excessive idle time monitoring</li>
           <li>Daily operations summary delivered to your inbox</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <h2>What Data BusFleetAI Reads From the Saucon TDS API</h2>
+        <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;">Saucon provides a suite of API services for accessing hosted telematics data. BusFleetAI connects to four core services: the Asset Location Service for real-time GPS movement, the Asset History Service for 24-hour event logs per vehicle, the Engine Stats Service for engine lifetime values, and the Predicted Status Data Service for scheduled versus actual route arrival times. All four power BusFleetAI's automated alerts and daily summary reports.</p>
+        <div style="overflow:hidden;border-radius:8px;border:1px solid hsl(210,30%,88%);margin-bottom:24px;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+            <thead><tr style="background:hsl(213,37%,24%);color:white;"><th style="padding:12px 16px;text-align:left;">Saucon TDS API Service</th><th style="padding:12px 16px;text-align:left;">Data Available</th><th style="padding:12px 16px;text-align:left;">How BusFleetAI Uses It</th></tr></thead>
+            <tbody>
+              <tr><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Asset Location Service</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Real-time latitude/longitude, vehicle speed, course and direction</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Triggers speed violation alerts and confirms bus is on route</td></tr>
+              <tr style="background:#f8fafc;"><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Asset History Service</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">24-hour event log per vehicle including sign-on events, speed readings, start/end times, and mileage</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Powers driver no-show detection, daily operations summary, and IFTA mileage reporting</td></tr>
+              <tr><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Engine Stats Service</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Engine lifetime miles, hours, and fuel consumption</td><td style="padding:12px 16px;border-bottom:1px solid hsl(210,30%,88%);">Enables predictive maintenance alerts and fleet cost reporting</td></tr>
+              <tr style="background:#f8fafc;"><td style="padding:12px 16px;">Predicted Status Data Service</td><td style="padding:12px 16px;">Active routes with scheduled, actual, and predicted arrival/departure times</td><td style="padding:12px 16px;">Powers first pickup confirmation and on-time performance monitoring</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:1.05rem;line-height:1.8;">Saucon notes that the TDS-API is continuously improved and updated, and custom API services can be provided on request. Additional automation services can be scoped and built for fleets with specific operational requirements.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-inner">
+        <h2>Additional Automation Services Available With Saucon TDS</h2>
+        <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;">Because BusFleetAI has direct access to all four Saucon TDS API services, the following automation capabilities are available beyond the core driver no-show and speed monitoring package:</p>
+        <div class="card-grid">
+          <div class="card"><h3>Driver No-Show Alerts (5-Minute Window)</h3><p>BusFleetAI monitors the Asset History Service for driver sign-on events. If a driver has not signed on within your defined window after their scheduled start time, an SMS and email alert goes to your designated recipients immediately.</p></div>
+          <div class="card"><h3>Real-Time Speed Violation Alerts</h3><p>The Asset Location Service returns vehicle speed continuously. BusFleetAI evaluates every reading against your defined threshold and sends an instant alert when any vehicle exceeds it &mdash; driver name, vehicle ID, location, and speed included.</p></div>
+          <div class="card"><h3>First Pickup Confirmation</h3><p>BusFleetAI detects the first stop event on a route from the Asset History Service and sends a confirmation alert to dispatch &mdash; proof that service has begun without anyone having to call.</p></div>
+          <div class="card"><h3>On-Time Performance Monitoring</h3><p>Using the Predicted Status Data Service, BusFleetAI compares scheduled versus actual arrival times across active routes and flags deviations that exceed your defined threshold.</p></div>
+          <div class="card"><h3>IFTA Mileage Reporting Automation</h3><p>The Asset History Service returns state-by-state mileage per vehicle. BusFleetAI compiles this automatically and generates IFTA quarterly mileage reports, eliminating manual logging for fleets operating across state lines.</p></div>
+          <div class="card"><h3>Daily Fleet Operations Summary</h3><p>Every morning BusFleetAI delivers an automated summary covering overnight activity, no-shows, speed events, route completion status, engine hours, and total mileage across your fleet.</p></div>
+        </div>
+        <p style="font-size:1.05rem;line-height:1.8;margin-top:24px;">All services are configured to your fleet's specific rules and thresholds and delivered to the recipients you define. Contact us to discuss which combination fits your operation.</p>
       </div>
     </section>
 
