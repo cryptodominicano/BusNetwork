@@ -494,6 +494,100 @@
         target.parentNode.insertBefore(wrap, target);
       }
 
+      function injectResourceLinks() {
+        if (document.querySelector('#busfleetai-resources')) return;
+        var faq = document.querySelector('#busfleetai-faq');
+        if (!faq) return;
+        var insertAfter = faq.closest('section') || faq;
+
+        var section = document.createElement('section');
+        section.id = 'busfleetai-resources';
+        section.style.cssText = 'padding:64px 24px; background:white;';
+
+        var inner = document.createElement('div');
+        inner.style.cssText = 'max-width:1000px; margin:0 auto;';
+
+        // Features & Integrations
+        var h2a = document.createElement('h2');
+        h2a.style.cssText = 'font-size:1.75rem; font-weight:700; text-align:center; color:hsl(213,37%,24%); margin-bottom:28px;';
+        h2a.textContent = 'Features & Integrations';
+        inner.appendChild(h2a);
+
+        var features = [
+          { title: 'Driver No-Show Alerts', desc: 'Know within 5 minutes when a driver misses their sign-on window.', href: '/driver-no-show-alerts' },
+          { title: 'DVIR Compliance Automation', desc: 'Automated alerts for missed pre-trip and post-trip inspections.', href: '/dvir-compliance' },
+          { title: 'Charter Bus Monitoring', desc: 'Built for charter and private bus companies running 20-200+ buses.', href: '/charter-bus' },
+          { title: 'Saucon TDS Integration', desc: 'Add automated alerts on top of your existing Saucon TDS system.', href: '/saucon-tds' },
+          { title: 'Zonar Integration', desc: 'Connect BusFleetAI to Zonar for real-time fleet alerts.', href: '/zonar' },
+          { title: 'Geotab Integration', desc: 'Layer automated monitoring on top of Geotab fleet telematics.', href: '/geotab' }
+        ];
+
+        var grid1 = document.createElement('div');
+        grid1.style.cssText = 'display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-bottom:48px;';
+        features.forEach(function(item) {
+          var card = document.createElement('a');
+          card.href = item.href;
+          card.style.cssText = 'display:block; background:white; border:1px solid hsl(210,30%,88%); border-radius:10px; padding:24px; text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;';
+          card.onmouseenter = function() { card.style.borderColor = 'hsl(17,100%,60%)'; card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; };
+          card.onmouseleave = function() { card.style.borderColor = 'hsl(210,30%,88%)'; card.style.boxShadow = 'none'; };
+          var h3 = document.createElement('h3');
+          h3.style.cssText = 'font-size:1.05rem; font-weight:700; color:hsl(213,37%,24%); margin-bottom:8px;';
+          h3.textContent = item.title;
+          var p = document.createElement('p');
+          p.style.cssText = 'font-size:0.9rem; line-height:1.6; color:hsl(213,20%,40%); margin-bottom:8px;';
+          p.textContent = item.desc;
+          var arrow = document.createElement('span');
+          arrow.style.cssText = 'font-size:0.9rem; font-weight:600; color:hsl(17,100%,60%);';
+          arrow.textContent = 'Learn more \u2192';
+          card.appendChild(h3);
+          card.appendChild(p);
+          card.appendChild(arrow);
+          grid1.appendChild(card);
+        });
+        inner.appendChild(grid1);
+
+        // Blog
+        var h2b = document.createElement('h2');
+        h2b.style.cssText = 'font-size:1.75rem; font-weight:700; text-align:center; color:hsl(213,37%,24%); margin-bottom:28px;';
+        h2b.textContent = 'From the Blog';
+        inner.appendChild(h2b);
+
+        var posts = [
+          { title: 'What Is DVIR? The Complete Guide for Bus Fleets', desc: 'Everything bus fleet managers need to know about Driver Vehicle Inspection Reports.', href: '/blog/what-is-dvir' },
+          { title: 'What Happens When a Bus Driver Doesn\u2019t Show Up?', desc: 'How automated monitoring turns a service failure into a manageable event.', href: '/blog/bus-driver-no-show' },
+          { title: 'Charter Bus Safety: The Three Pillars', desc: 'Driver accountability, speed compliance, and DVIR integrity.', href: '/blog/charter-bus-safety' },
+          { title: 'How Much Is Bus Fleet Idle Time Costing You?', desc: 'A 50-bus fleet idling 30 min/day wastes $29,000 a year in diesel.', href: '/blog/bus-fleet-idle-time' },
+          { title: 'Saucon TDS: Features, Limits, and What to Add', desc: 'What Saucon TDS does well, where it falls short, and how BusFleetAI fills the gap.', href: '/blog/saucon-tds-guide' }
+        ];
+
+        var grid2 = document.createElement('div');
+        grid2.style.cssText = 'display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px;';
+        posts.forEach(function(item) {
+          var card = document.createElement('a');
+          card.href = item.href;
+          card.style.cssText = 'display:block; background:#f8fafc; border:1px solid hsl(210,30%,88%); border-radius:10px; padding:24px; text-decoration:none; transition:box-shadow 0.2s, border-color 0.2s;';
+          card.onmouseenter = function() { card.style.borderColor = 'hsl(17,100%,60%)'; card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; };
+          card.onmouseleave = function() { card.style.borderColor = 'hsl(210,30%,88%)'; card.style.boxShadow = 'none'; };
+          var h3 = document.createElement('h3');
+          h3.style.cssText = 'font-size:1.05rem; font-weight:700; color:hsl(213,37%,24%); margin-bottom:8px;';
+          h3.textContent = item.title;
+          var p = document.createElement('p');
+          p.style.cssText = 'font-size:0.9rem; line-height:1.6; color:hsl(213,20%,40%); margin-bottom:8px;';
+          p.textContent = item.desc;
+          var arrow = document.createElement('span');
+          arrow.style.cssText = 'font-size:0.9rem; font-weight:600; color:hsl(17,100%,60%);';
+          arrow.textContent = 'Read article \u2192';
+          card.appendChild(h3);
+          card.appendChild(p);
+          card.appendChild(arrow);
+          grid2.appendChild(card);
+        });
+        inner.appendChild(grid2);
+
+        section.appendChild(inner);
+        insertAfter.parentNode.insertBefore(section, insertAfter.nextSibling);
+      }
+
       // Only run after everything is loaded
       window.addEventListener('load', function() {
         setTimeout(addWhatsAppLinks, 1000);
@@ -504,6 +598,8 @@
         setTimeout(updateTestimonial, 2000);
         setTimeout(injectFAQSection, 1000);
         setTimeout(injectFAQSection, 2500);
+        setTimeout(injectResourceLinks, 1500);
+        setTimeout(injectResourceLinks, 3000);
       });
     </script>
   </body>
