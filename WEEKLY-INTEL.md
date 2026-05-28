@@ -112,6 +112,57 @@ End of Month 12 targets: 100+ ranked keywords, 25+ in top 10, 50+ referring doma
 
 ---
 
+## Session: May 28, 2026 — 06:00 UTC
+
+### Session Type
+Month 1 execution continued: full SEO/GEO audit against KB, all audit fixes deployed, Resend contact form live, Clarity deployed.
+
+### SEO/GEO Audit Scorecard (Post-Fix)
+Ran comprehensive live audit against all 46 points in seo_agent_knowledge Qdrant KB. 20 categories tested across 16 HTML pages + robots.txt + llms.txt + sitemap.xml.
+
+Pre-fix score: 72% (14.4/20 categories passing)
+Post-fix score: 95%+ (all categories passing except homepage H1 which uses JS injector for React compatibility)
+
+### Audit Fixes Deployed (Commit 8205604, 15 files, 221 insertions)
+
+Fix 1: Homepage H1 added via JS injector (React hero h2 promoted to h1).
+Fix 2: fetchpriority="high" added to hero images on all 13 static content pages.
+Fix 3: Preload links added in head for hero images on 13 pages.
+Fix 4: All Unsplash images converted to WebP (&fm=webp&q=80), zero JPG remaining.
+Fix 5: Security headers added to vercel.json (X-Frame-Options, X-Content-Type-Options, HSTS, Referrer-Policy, Permissions-Policy).
+Fix 6: 5 blog title tags shortened to under 60 characters (removed "| BusFleetAI" suffix from blogs).
+Fix 7: "BusFleetAI" entity confirmed in first paragraph of all 6 blog posts.
+Fix 8: Service schema added to charter-bus, driver-no-show-alerts, dvir-compliance.
+Fix 9: SoftwareApplication schema added to saucon-tds, geotab, zonar.
+Fix 10: OG tags added to blog/index.html.
+
+### Contact Form — Resend API Live
+Replaced Formspree with Vercel serverless function at /api/contact.js. Form submissions now go through Resend API (endpoint: https://api.resend.com/emails, NOT /v1/emails) from Bus-Lead@goldcoastai.pro to isaias@inteliard.com. Reply-to set to lead's email. All form fields rendered dynamically in the lead email table.
+
+RESEND_API_KEY added as encrypted Vercel env var on project prj_siP8LBjQrLr9w8XghoAJxwH9ZFqO.
+
+Critical discovery: Resend send endpoint is /emails not /v1/emails. The /v1/ path returns 401 with misleading "restricted_api_key" error. Resend API skill updated to reflect this.
+
+### Microsoft Clarity Deployed (Commit via GitHub API)
+Clarity tracking snippet (project wxzhvix4ea) added to all 15 HTML pages. Tracking ID stored in master.env.
+
+### Vercel Project ID Confirmed
+prj_siP8LBjQrLr9w8XghoAJxwH9ZFqO (bus-network). Added to master.env as SITE_BUSFLEETAI_VERCEL_PROJECT_ID.
+
+### Current Site State (Post All Deploys)
+17 live pages (7 service/integration, 7 blog posts, 1 blog index, 2 legal). All pages have: GA4 + Clarity tracking, correct schema per page type, GEO-optimized first paragraphs with BusFleetAI entity, attributed FMCSA/DOT statistics, fetchpriority hero images in WebP, security headers via vercel.json, full internal linking with reverse silo pattern. robots.txt allows all 10 AI bots, Bytespider disallowed. llms.txt lists all pages. sitemap.xml current.
+
+### Priority Actions (Next Session)
+1. Begin directory backlink campaign: LinkedIn company page, Crunchbase, Capterra, G2 (Month 1 plan)
+2. Submit sitemap manually in Bing Webmaster dashboard (API SubmitFeed still returns NotAuthorized)
+3. Build rank intelligence agent (weekly DataForSEO SERP sweep, auto-push to WEEKLY-INTEL.md)
+4. Build technical health agent (monthly page-by-page KB compliance check)
+5. Create Google Sheet tracker matching golf site tab structure
+6. Month 2 content: /blog/fmcsa-bus-fleet-compliance, /blog/bus-fleet-management-best-practices, /blog/geotab-vs-saucon-tds-bus-fleets
+7. Expand /zonar to match /saucon-tds and /geotab content depth
+8. Consider retargeting /driver-no-show-alerts keyword (search intent mismatch confirmed in GEO audit)
+
+
 ## Session: May 28, 2026 — 02:00 UTC
 
 ### Session Type
