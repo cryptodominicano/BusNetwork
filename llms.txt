@@ -1,0 +1,29 @@
+# BusFleetAI
+
+> AI-powered bus fleet monitoring software for charter and private bus companies. Automated alerts for driver no-shows, speed violations, and DVIR compliance. Integrates with Saucon TDS, Zonar, and Geotab. No hardware required.
+
+## Service Pages
+
+- [Bus Fleet Monitoring Software](https://www.busfleetai.com/): Homepage. AI-powered fleet monitoring with automated alerts for driver no-shows, speed violations, DVIR compliance, and excessive idling. Up and running in 72 hours with no hardware.
+- [Driver No-Show Alerts](https://www.busfleetai.com/driver-no-show-alerts): Automated driver no-show detection and alerting system. Know within 5 minutes when a driver misses their sign-on window.
+- [DVIR Compliance Automation](https://www.busfleetai.com/dvir-compliance): Automated DVIR compliance tracking and alerts for missed pre-trip and post-trip inspections.
+- [Charter Bus Fleet Monitoring](https://www.busfleetai.com/charter-bus): Fleet monitoring built for charter and private bus companies running 20 to 200+ buses.
+
+## Integration Pages
+
+- [Saucon TDS Integration](https://www.busfleetai.com/saucon-tds): Add automated monitoring and alerts on top of your existing Saucon TDS fleet management system.
+- [Zonar Integration](https://www.busfleetai.com/zonar): Connect BusFleetAI to Zonar for real-time fleet alerts and compliance monitoring.
+- [Geotab Integration](https://www.busfleetai.com/geotab): Layer automated bus fleet monitoring on top of Geotab fleet telematics.
+
+## Blog
+
+- [What Is DVIR? The Complete Guide for Bus Fleets](https://www.busfleetai.com/blog/what-is-dvir): Everything bus fleet managers need to know about Driver Vehicle Inspection Reports, including federal requirements and compliance.
+- [What Happens When a Bus Driver Doesn't Show Up?](https://www.busfleetai.com/blog/bus-driver-no-show): How automated monitoring turns a driver no-show from a service failure into a manageable event.
+- [Charter Bus Safety: The Three Pillars](https://www.busfleetai.com/blog/charter-bus-safety): Driver accountability, speed compliance, and DVIR integrity for charter bus operations.
+- [How Much Is Bus Fleet Idle Time Costing You?](https://www.busfleetai.com/blog/bus-fleet-idle-time): Analysis of idle time costs for bus fleets including diesel waste, engine wear, and compliance risk.
+- [Saucon TDS: Features, Limits, and What to Add](https://www.busfleetai.com/blog/saucon-tds-guide): What Saucon TDS does well, where it falls short, and how BusFleetAI fills the gap.
+
+## Legal
+
+- [Privacy Policy](https://www.busfleetai.com/privacy)
+- [Terms of Service](https://www.busfleetai.com/terms)
