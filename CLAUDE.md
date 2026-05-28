@@ -17,13 +17,16 @@ GitHub repo: cryptodominicano/BusNetwork (main branch, auto-deploys to Vercel).
 
 | Resource | Value |
 |----------|-------|
-| Vercel Project | Not yet tracked in master.env |
+| Vercel Project | prj_siP8LBjQrLr9w8XghoAJxwH9ZFqO (bus-network) |
 | GA4 Measurement ID | G-R18FVQ82XG |
 | GSC Property | busfleetai.com (URL prefix, verified, Owner: IsaiasPerez1977@gmail.com) |
 | GSC Service Account | n8n-analytics@gen-lang-client-0224310505.iam.gserviceaccount.com (Full access) |
 | Bing Webmaster | busfleetai.com/ (verified, 2 clicks / 134 impressions as of May 27) |
 | IndexNow Key | 315f4dac70b642a3975368b65600393e |
 | IndexNow Key Location | https://www.busfleetai.com/315f4dac70b642a3975368b65600393e.txt |
+| Microsoft Clarity | wxzhvix4ea |
+| Resend From Email | Bus-Lead@goldcoastai.pro |
+| Contact Form | /api/contact.js (Vercel serverless, Resend API) |
 | DataForSEO Auth (Base64) | aXNhaWFzQGludGVsaWFyZC5jb206MGVhYmUyMjY5OTFmOGFiYg== |
 | DataForSEO Location | 2840 (USA) |
 | DataForSEO Language | en |
@@ -107,15 +110,16 @@ After every deploy confirm: HTTP 200 on all pages, schema validates in Rich Resu
 
 ---
 
-## Priority Actions (Updated May 27, 2026)
+## Priority Actions (Updated May 28, 2026)
 
-1. Add SITE_BUSFLEETAI_* block to master.env. Deploy IndexNow key file (315f4dac70b642a3975368b65600393e.txt) to repo. Submit sitemap via Bing API.
-2. Fix /pricing 404.
-3. Fix "Ascensions" typo in all footers.
-4. Create llms.txt.
-5. Update robots.txt with full AI bot directives.
-6. Add WebSite schema and sameAs to homepage.
-7. Expand DVIR blog post (4,480/mo keyword cluster opportunity).
-8. Add author Person schema to all blog posts.
-9. Create blog index page.
-10. Begin directory backlink campaign.
+COMPLETED: master.env block, IndexNow key, sitemap submission, /pricing 404, typo fix, llms.txt, robots.txt, WebSite schema, sameAs, DVIR expansion (5,000+ words), DVIR requirements post, author schema, blog index, GEO first-60-words rewrites, statistics density, internal linking overhaul, fetchpriority/WebP/security headers, Service+SoftwareApplication schema, Clarity, Resend contact form.
+
+REMAINING:
+1. Submit sitemap manually in Bing Webmaster dashboard (API SubmitFeed returns NotAuthorized).
+2. Begin directory backlink campaign: LinkedIn, Crunchbase, Capterra, G2.
+3. Build rank intelligence agent (weekly SERP sweep).
+4. Build technical health agent (monthly compliance check).
+5. Create Google Sheet tracker.
+6. Month 2 content: /blog/fmcsa-bus-fleet-compliance, /blog/bus-fleet-management-best-practices, /blog/geotab-vs-saucon-tds-bus-fleets.
+7. Expand /zonar content depth.
+8. Retarget /driver-no-show-alerts keyword (search intent mismatch).
