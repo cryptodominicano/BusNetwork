@@ -707,8 +707,34 @@
         footer.appendChild(copy);
       }
 
+      function injectH1() {
+        // If H1 already exists (React may have rendered one), skip
+        if (document.querySelector('h1')) return;
+        // Try to find the React hero heading (usually an H2 in the hero section)
+        var heroH2 = document.querySelector('.gradient-hero h2, section h2, [class*="hero"] h2, main h2');
+        if (heroH2) {
+          // Change the tag from h2 to h1 by creating a new h1 with same attributes/content
+          var h1 = document.createElement('h1');
+          h1.className = heroH2.className;
+          h1.innerHTML = heroH2.innerHTML;
+          h1.setAttribute('style', heroH2.getAttribute('style') || '');
+          heroH2.parentNode.replaceChild(h1, heroH2);
+          return;
+        }
+        // Fallback: insert a visually-styled H1 before the root div's first section
+        var firstSection = document.querySelector('#root section, #root div.section, #root main');
+        if (firstSection) {
+          var h1 = document.createElement('h1');
+          h1.textContent = 'Bus Fleet Monitoring Software';
+          h1.style.cssText = 'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;';
+          firstSection.insertBefore(h1, firstSection.firstChild);
+        }
+      }
+
       // Only run after everything is loaded
       window.addEventListener('load', function() {
+        setTimeout(injectH1, 500);
+        setTimeout(injectH1, 1500);
         setTimeout(addEmailLinks, 1000);
         setTimeout(addEmailLinks, 2000);
         setTimeout(cleanUpReactContent, 1000);
