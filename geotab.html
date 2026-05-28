@@ -121,7 +121,7 @@
         <nav class="header-nav">
           <a href="/">Home</a>
           <a href="/#features">Features</a>
-          <a href="/blog/what-is-dvir">Blog</a>
+          <a href="/blog">Blog</a>
           <a class="email-link" href="mailto:Isaias@InteliaRD.com">Isaias@InteliaRD.com</a>
           <a href="/#contact" class="nav-cta">Get Started</a>
         </nav>
@@ -136,7 +136,7 @@
 
     <section class="hero">
       <h1>Add Automated Alerts to Your Geotab Fleet Telematics System</h1>
-      <p>Geotab fleet telematics gives bus operators GPS tracking, speed data, driver behavior monitoring, DVIR inspection records, and engine diagnostics in one platform. BusFleetAI connects to the Geotab telematics system and adds the automated alert layer that Geotab does not provide natively &mdash; driver no-show notifications, speed violation alerts, and compliance monitoring &mdash; delivered to your team by SMS and email within 5 minutes of any threshold breach.</p>
+      <p>Geotab bus fleet alerts are not included natively in the Geotab telematics platform. BusFleetAI connects to the MyGeotab API and adds automated driver no-show notifications, speed violation alerts, and DVIR compliance monitoring required under 49 CFR 396.11. With approximately 20% of inspected commercial vehicles placed out of service for maintenance violations (FMCSA), proactive alerting reduces compliance risk.</p>
       <a href="/#contact" class="btn-primary">Get a Free Fleet Assessment &rarr;</a>
       <img src="https://images.unsplash.com/photo-1579722176915-95d4ee62565e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTIzNTR8MHwxfHNlYXJjaHwxfHx0cmFuc3BvcnRhdGlvbiUyMGRpc3BhdGNoJTIwb3BlcmF0aW9ucyUyMG1vbml0b3J8ZW58MHwwfHx8MTc3NTAxMTEyNnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Fleet operations center — BusFleetAI adds automated alerts to your Geotab platform" loading="eager" width="100%" style="border-radius: 12px; object-fit: cover; max-height: 480px; margin-top: 32px;" />
     </section>
@@ -145,7 +145,7 @@
       <div class="section-inner">
         <h2>What Geotab Does</h2>
         <div class="body-text">
-          <p>Geotab provides GPS tracking, engine diagnostics, driver behavior scoring, and compliance tools for commercial fleets. It collects rich telematics data from every vehicle in your fleet &mdash; location, speed, idling, trip history, and inspection records. Geotab is a powerful data platform, but the data it collects does not automatically turn into the proactive, real-time alerts your operations team needs to prevent service failures.</p>
+          <p>Geotab provides GPS tracking, engine diagnostics, driver behavior scoring, and compliance tools for commercial fleets. It collects rich telematics data from every vehicle in your fleet, including location, speed, idling, trip history, and inspection records. The US motorcoach industry includes approximately 3,000 companies (American Bus Association), many of which rely on Geotab. Geotab is a powerful data platform, but the data it collects does not automatically turn into the proactive, real-time alerts your operations team needs to prevent service failures. For background on inspection obligations, see the guide on <a href="/blog/what-is-dvir" style="color:hsl(17,100%,60%);font-weight:600;">understanding DVIR requirements for bus fleets</a>.</p>
         </div>
       </div>
     </section>
@@ -156,15 +156,15 @@
         <div class="card-grid">
           <div class="card">
             <h3>No Driver No-Show Alerts</h3>
-            <p>Geotab tracks driver activity but does not send you an SMS or email when a driver fails to show up for their scheduled bus route.</p>
+            <p>Geotab tracks driver activity but does not send you an SMS or email when a driver fails to show up for their scheduled bus route. FMCSA reports approximately 5,700 fatal crashes involving large trucks and buses annually, making immediate driver accountability a safety priority.</p>
           </div>
           <div class="card">
             <h3>No Instant Speed Notifications</h3>
-            <p>Speed events are logged in reports but your team does not get an immediate alert when a bus exceeds your defined speed threshold on the road.</p>
+            <p>Speed events are logged in reports but your team does not get an immediate alert when a bus exceeds your defined speed threshold on the road. NHTSA data shows speeding contributes to approximately 29% of all traffic fatalities.</p>
           </div>
           <div class="card">
             <h3>No Proactive DVIR Alerts</h3>
-            <p>Geotab stores inspection data but does not automatically notify you the moment a pre-trip or post-trip DVIR is missed or incomplete.</p>
+            <p>Geotab stores inspection data but does not automatically notify you the moment a pre-trip or post-trip DVIR is missed or incomplete. Under 49 CFR 396.13, motor carriers must review DVIRs before dispatching vehicles, and FMCSA civil penalties for vehicle maintenance violations can exceed $16,000 per violation.</p>
           </div>
         </div>
       </div>
@@ -203,7 +203,7 @@
             </tbody>
           </table>
         </div>
-        <p style="font-size:1.05rem;line-height:1.8;">Geotab notes that the MyGeotab SDK is the same API Geotab itself uses internally &mdash; meaning it exposes everything in the platform. BusFleetAI uses the Data Feed interface for continuous streaming of changes as they occur, delivering monitoring with no manual review required.</p>
+        <p style="font-size:1.05rem;line-height:1.8;">Geotab notes that the MyGeotab SDK is the same API Geotab itself uses internally, meaning it exposes everything in the platform. FMCSA CSA evaluates carriers across 7 BASICs, and the Vehicle Maintenance BASIC intervention threshold is 80% for passenger carriers. BusFleetAI uses the Data Feed interface for continuous streaming of changes as they occur, delivering monitoring with no manual review required.</p>
       </div>
     </section>
 
@@ -217,9 +217,9 @@
           <div class="card"><h3>DVIR Compliance Monitoring</h3><p>BusFleetAI reads Geotab DVIRLog data and alerts your team when a pre-trip or post-trip inspection has not been filed on schedule. Defect records are included in the daily summary report.</p></div>
           <div class="card"><h3>Engine Health and Predictive Maintenance Alerts</h3><p>Geotab StatusData exposes engine fault codes, oil temperature, battery voltage, and more. BusFleetAI monitors these values and alerts your maintenance team when a reading indicates an issue before it becomes a breakdown.</p></div>
           <div class="card"><h3>Hours of Service Compliance Monitoring</h3><p>BusFleetAI reads DutyStatusAvailability data from MyGeotab and alerts operations when a driver is approaching or has exceeded their HOS limits before a violation is recorded.</p></div>
-          <div class="card"><h3>Idle Time and Fuel Waste Reporting</h3><p>BusFleetAI reads trip and exception data from MyGeotab to identify excessive idle time per vehicle and driver. Idle events are flagged in real time and compiled in the daily summary for targeted coaching.</p></div>
+          <div class="card"><h3>Idle Time and Fuel Waste Reporting</h3><p>BusFleetAI reads trip and exception data from MyGeotab to identify excessive idle time per vehicle and driver. Idle events are flagged in real time and compiled in the daily summary for targeted coaching. Learn more about <a href="/blog/bus-fleet-idle-time" style="color:hsl(17,100%,60%);font-weight:600;">how idle time impacts bus fleet costs</a>.</p></div>
         </div>
-        <p style="font-size:1.05rem;line-height:1.8;margin-top:24px;">All services are configured to your fleet's specific rules and delivered to the recipients you define by SMS and email. Contact us to discuss which combination fits your Geotab operation.</p>
+        <p style="font-size:1.05rem;line-height:1.8;margin-top:24px;">Under 49 CFR 396.11, drivers must complete a written DVIR at the end of each day's work. All services are configured to your fleet's specific rules and delivered to the recipients you define by SMS and email. Contact us to discuss which combination fits your Geotab operation.</p>
       </div>
     </section>
 

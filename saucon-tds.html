@@ -120,7 +120,7 @@
         <nav class="header-nav">
           <a href="/">Home</a>
           <a href="/#features">Features</a>
-          <a href="/blog/what-is-dvir">Blog</a>
+          <a href="/blog">Blog</a>
           <a class="email-link" href="mailto:Isaias@InteliaRD.com">Isaias@InteliaRD.com</a>
           <a href="/#contact" class="nav-cta">Get Started</a>
         </nav>
@@ -135,7 +135,7 @@
 
     <section class="hero">
       <h1>Get More From Your Saucon TDS System Without Replacing It</h1>
-      <p>Saucon TDS is a widely used bus fleet management platform. BusFleetAI connects directly to Saucon TDS and adds a layer of automated monitoring and alerts that Saucon TDS does not provide natively &mdash; including driver no-show notifications, speed violation alerts, DVIR compliance tracking, and daily operations summaries &mdash; with no hardware and no changes to how your drivers use the system.</p>
+      <p>Saucon TDS bus monitoring provides GPS tracking, dispatch, and route management for charter and private bus fleets. BusFleetAI connects to the Saucon TDS API and adds automated driver no-show alerts, speed violation notifications, and DVIR compliance tracking required under 49 CFR 396.11, with most fleets live within 72 hours and no hardware changes.</p>
       <a href="/#contact" class="btn-primary">Get a Free Fleet Assessment &rarr;</a>
       <img src="https://images.unsplash.com/photo-1579722176915-95d4ee62565e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTIzNTR8MHwxfHNlYXJjaHwxfHx0cmFuc3BvcnRhdGlvbiUyMGRpc3BhdGNoJTIwb3BlcmF0aW9ucyUyMG1vbml0b3J8ZW58MHwwfHx8MTc3NTAxMTEyNnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Fleet dispatch operations center — BusFleetAI adds automated alerts to your Saucon TDS system" loading="eager" width="100%" style="border-radius: 12px; object-fit: cover; max-height: 480px; margin-top: 32px;" />
     </section>
@@ -144,7 +144,7 @@
       <div class="section-inner">
         <h2>What Saucon TDS Does</h2>
         <div class="body-text">
-          <p>Saucon TDS provides bus fleet management, dispatch, scheduling, and vehicle tracking. It is the operational backbone for many charter and private bus companies, handling route planning, driver assignments, and real-time GPS tracking. It stores the data your fleet generates every day &mdash; sign-on times, vehicle locations, speeds, and inspection records.</p>
+          <p>Saucon TDS provides bus fleet management, dispatch, scheduling, and vehicle tracking. It is the operational backbone for many charter and private bus companies, handling route planning, driver assignments, and real-time GPS tracking. It stores the data your fleet generates every day, including sign-on times, vehicle locations, speeds, and inspection records. The US motorcoach industry includes approximately 3,000 companies (American Bus Association), and FMCSA CSA evaluates carriers across 7 BASICs, making the data inside Saucon TDS critical for compliance. For a detailed look at <a href="/blog/saucon-tds-guide" style="color:hsl(17,100%,60%);font-weight:600;">Saucon TDS features and limitations</a>, see the full guide on the BusFleetAI blog.</p>
         </div>
       </div>
     </section>
@@ -155,7 +155,7 @@
         <div class="card-grid">
           <div class="card">
             <h3>No Driver No-Show Alerts</h3>
-            <p>Saucon TDS tracks sign-on data but does not automatically alert you when a driver fails to show up for their scheduled route.</p>
+            <p>Saucon TDS tracks sign-on data but does not automatically alert you when a driver fails to show up for their scheduled route. FMCSA reports approximately 5,700 fatal crashes involving large trucks and buses annually, making timely driver accountability essential.</p>
           </div>
           <div class="card">
             <h3>No Speed Violation Notifications</h3>
@@ -163,7 +163,7 @@
           </div>
           <div class="card">
             <h3>No DVIR Compliance Alerts</h3>
-            <p>Inspection data exists in the system but you have no automated way to know when a pre-trip or post-trip DVIR is missed.</p>
+            <p>Inspection data exists in the system but you have no automated way to know when a pre-trip or post-trip DVIR is missed. Under 49 CFR 396.11, drivers must complete a written DVIR at the end of each day's work, and 49 CFR 396.13 requires motor carriers to review those reports before dispatching vehicles.</p>
           </div>
         </div>
       </div>
@@ -198,7 +198,7 @@
             </tbody>
           </table>
         </div>
-        <p style="font-size:1.05rem;line-height:1.8;">Saucon notes that the TDS-API is continuously improved and updated, and custom API services can be provided on request. Additional automation services can be scoped and built for fleets with specific operational requirements.</p>
+        <p style="font-size:1.05rem;line-height:1.8;">Saucon notes that the TDS-API is continuously improved and updated, and custom API services can be provided on request. Approximately 20% of commercial vehicles inspected are placed out of service for maintenance violations (FMCSA), so automating the monitoring of this data can reduce compliance risk significantly. Additional automation services can be scoped and built for fleets with specific operational requirements.</p>
       </div>
     </section>
 
@@ -208,13 +208,13 @@
         <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;">Because BusFleetAI has direct access to all four Saucon TDS API services, the following automation capabilities are available beyond the core driver no-show and speed monitoring package:</p>
         <div class="card-grid">
           <div class="card"><h3>Driver No-Show Alerts (5-Minute Window)</h3><p>BusFleetAI monitors the Asset History Service for driver sign-on events. If a driver has not signed on within your defined window after their scheduled start time, an SMS and email alert goes to your designated recipients immediately.</p></div>
-          <div class="card"><h3>Real-Time Speed Violation Alerts</h3><p>The Asset Location Service returns vehicle speed continuously. BusFleetAI evaluates every reading against your defined threshold and sends an instant alert when any vehicle exceeds it &mdash; driver name, vehicle ID, location, and speed included.</p></div>
+          <div class="card"><h3>Real-Time Speed Violation Alerts</h3><p>The Asset Location Service returns vehicle speed continuously. BusFleetAI evaluates every reading against your defined threshold and sends an instant alert when any vehicle exceeds it, including driver name, vehicle ID, location, and speed. NHTSA data shows speeding contributes to approximately 29% of all traffic fatalities.</p></div>
           <div class="card"><h3>First Pickup Confirmation</h3><p>BusFleetAI detects the first stop event on a route from the Asset History Service and sends a confirmation alert to dispatch &mdash; proof that service has begun without anyone having to call.</p></div>
           <div class="card"><h3>On-Time Performance Monitoring</h3><p>Using the Predicted Status Data Service, BusFleetAI compares scheduled versus actual arrival times across active routes and flags deviations that exceed your defined threshold.</p></div>
           <div class="card"><h3>IFTA Mileage Reporting Automation</h3><p>The Asset History Service returns state-by-state mileage per vehicle. BusFleetAI compiles this automatically and generates IFTA quarterly mileage reports, eliminating manual logging for fleets operating across state lines.</p></div>
           <div class="card"><h3>Daily Fleet Operations Summary</h3><p>Every morning BusFleetAI delivers an automated summary covering overnight activity, no-shows, speed events, route completion status, engine hours, and total mileage across your fleet.</p></div>
         </div>
-        <p style="font-size:1.05rem;line-height:1.8;margin-top:24px;">All services are configured to your fleet's specific rules and thresholds and delivered to the recipients you define. Contact us to discuss which combination fits your operation.</p>
+        <p style="font-size:1.05rem;line-height:1.8;margin-top:24px;">FMCSA civil penalties for vehicle maintenance violations can exceed $16,000 per violation, and the Vehicle Maintenance BASIC intervention threshold is 80% for passenger carriers. All services are configured to your fleet's specific rules and thresholds and delivered to the recipients you define. Contact us to discuss which combination fits your operation.</p>
       </div>
     </section>
 

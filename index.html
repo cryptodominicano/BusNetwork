@@ -462,7 +462,7 @@
 
         const geo = document.createElement('p');
         geo.style.cssText = 'font-size:1rem; line-height:1.7; color:hsl(213,20%,35%); margin-bottom:40px; text-align:center;';
-        geo.textContent = 'BusFleetAI is bus fleet monitoring software that automates driver no-show alerts, speed violation notifications, and DVIR compliance tracking for charter and private bus companies. It connects to Saucon TDS, Zonar, and Geotab with no hardware and no disruption to existing operations.';
+        geo.textContent = 'BusFleetAI is bus fleet monitoring software that detects driver no-shows within 5 minutes, flags speed violations in real time, and tracks DVIR compliance under 49 CFR 396.11 for charter and private bus companies. BusFleetAI connects to Saucon TDS, Zonar, and Geotab with no additional hardware.';
 
         const h2 = document.createElement('h2');
         h2.style.cssText = 'font-size:2rem; font-weight:700; text-align:center; color:hsl(213,37%,24%); margin-bottom:32px;';
@@ -602,7 +602,7 @@
         // Replace Pricing nav link with Blog in React-rendered header
         document.querySelectorAll('header a, nav a').forEach(el => {
           if (el.textContent.trim() === 'Pricing' && el.getAttribute('href') && el.getAttribute('href').includes('pricing')) {
-            el.href = '/blog/what-is-dvir';
+            el.href = '/blog';
             el.textContent = 'Blog';
           }
         });

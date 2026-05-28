@@ -120,7 +120,7 @@
         <nav class="header-nav">
           <a href="/">Home</a>
           <a href="/#features">Features</a>
-          <a href="/blog/what-is-dvir">Blog</a>
+          <a href="/blog">Blog</a>
           <a class="email-link" href="mailto:Isaias@InteliaRD.com">Isaias@InteliaRD.com</a>
           <a href="/#contact" class="nav-cta">Get Started</a>
         </nav>
@@ -135,7 +135,7 @@
 
     <section class="hero">
       <h1>Get More From Zonar With AI-Powered Bus Fleet Alerts</h1>
-      <p>Zonar is a telematics and fleet management platform used by school and charter bus companies across the United States. BusFleetAI connects to Zonar and adds automated driver no-show alerts, speed violation notifications, and DVIR compliance monitoring &mdash; alerts that Zonar does not send natively &mdash; so your operations team knows about problems within 5 minutes, not hours.</p>
+      <p>Zonar bus fleet monitoring collects GPS, EVIR inspection, and driver activity data from school and charter bus operations. BusFleetAI connects to the Zonar OMI API and adds automated driver no-show alerts, speed violation notifications, and DVIR compliance tracking required under 49 CFR 396.11. FMCSA reports approximately 5,700 fatal crashes involving large trucks and buses annually, making proactive alerting essential.</p>
       <a href="/#contact" class="btn-primary">Get a Free Fleet Assessment &rarr;</a>
       <img src="https://images.unsplash.com/photo-1579722176915-95d4ee62565e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4OTIzNTR8MHwxfHNlYXJjaHwxfHx0cmFuc3BvcnRhdGlvbiUyMGRpc3BhdGNoJTIwb3BlcmF0aW9ucyUyMG1vbml0b3J8ZW58MHwwfHx8MTc3NTAxMTEyNnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Fleet operations monitoring — BusFleetAI adds automated alerts to your Zonar system" loading="eager" width="100%" style="border-radius: 12px; object-fit: cover; max-height: 480px; margin-top: 32px;" />
     </section>
@@ -144,7 +144,7 @@
       <div class="section-inner">
         <h2>What Zonar Does</h2>
         <div class="body-text">
-          <p>Zonar provides GPS tracking, electronic verified inspections (EVIR), and fleet diagnostics for bus companies. It captures vehicle location, driver activity, and inspection data in real time. Zonar is a strong data platform &mdash; but the data it collects does not automatically turn into the proactive alerts your operations team needs to prevent service failures.</p>
+          <p>Zonar provides GPS tracking, electronic verified inspections (EVIR), and fleet diagnostics for bus companies. It captures vehicle location, driver activity, and inspection data in real time. The US motorcoach industry includes approximately 3,000 companies (American Bus Association), and FMCSA CSA evaluates carriers across 7 BASICs. Zonar is a strong data platform, but the data it collects does not automatically turn into the proactive alerts your operations team needs to prevent service failures. For a full overview, see the <a href="/blog/what-is-dvir" style="color:hsl(17,100%,60%);font-weight:600;">complete DVIR compliance guide for bus fleets</a>.</p>
         </div>
       </div>
     </section>
@@ -155,15 +155,15 @@
         <div class="card-grid">
           <div class="card">
             <h3>No Driver No-Show Alerts</h3>
-            <p>Zonar records sign-on activity but does not send you an SMS or email when a driver fails to show up for their scheduled route.</p>
+            <p>Zonar records sign-on activity but does not send you an SMS or email when a driver fails to show up for their scheduled route. Approximately 20% of commercial vehicles inspected are placed out of service for maintenance violations (FMCSA), underscoring the need for automated driver and vehicle accountability.</p>
           </div>
           <div class="card">
             <h3>No Real-Time Speed Notifications</h3>
-            <p>Speed data is logged but your team does not get an immediate alert when a bus exceeds your defined speed threshold.</p>
+            <p>Speed data is logged but your team does not get an immediate alert when a bus exceeds your defined speed threshold. NHTSA data shows speeding contributes to approximately 29% of all traffic fatalities.</p>
           </div>
           <div class="card">
             <h3>No Proactive DVIR Alerts</h3>
-            <p>Zonar captures inspection data but does not automatically notify you when a pre-trip or post-trip DVIR is missed or incomplete.</p>
+            <p>Zonar captures inspection data but does not automatically notify you when a pre-trip or post-trip DVIR is missed or incomplete. Under 49 CFR 396.13, motor carriers must review DVIRs before dispatching vehicles, and FMCSA civil penalties for vehicle maintenance violations can exceed $16,000 per violation.</p>
           </div>
         </div>
       </div>
@@ -200,7 +200,7 @@
             </tbody>
           </table>
         </div>
-        <p style="font-size:1.05rem;line-height:1.8;">Zonar's OMI API supports both real-time polling and historical data retrieval, which allows BusFleetAI to monitor current fleet status and reconstruct event timelines for daily summary reports.</p>
+        <p style="font-size:1.05rem;line-height:1.8;">Zonar's OMI API supports both real-time polling and historical data retrieval, which allows BusFleetAI to monitor current fleet status and reconstruct event timelines for daily summary reports. Under 49 CFR 396.11, drivers must complete a written DVIR at the end of each day's work, and the Vehicle Maintenance BASIC intervention threshold is 80% for passenger carriers.</p>
       </div>
     </section>
 
@@ -210,13 +210,13 @@
         <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;">BusFleetAI's direct access to the Zonar OMI API enables the following automation services beyond core driver monitoring:</p>
         <div class="card-grid">
           <div class="card"><h3>Driver No-Show Alerts (5-Minute Window)</h3><p>BusFleetAI monitors Zonar sign-on events and compares them against scheduled start times. If a driver has not checked in within your defined window, dispatch receives an SMS and email alert immediately.</p></div>
-          <div class="card"><h3>Real-Time Speed Violation Alerts</h3><p>Zonar's OMI API returns continuous speed readings per vehicle. BusFleetAI evaluates every reading and sends an instant alert when any bus exceeds your defined threshold &mdash; driver, location, and speed included.</p></div>
+          <div class="card"><h3>Real-Time Speed Violation Alerts</h3><p>Zonar's OMI API returns continuous speed readings per vehicle. BusFleetAI evaluates every reading and sends an instant alert when any bus exceeds your defined threshold, including driver, location, and speed.</p></div>
           <div class="card"><h3>EVIR (DVIR) Compliance Monitoring</h3><p>Zonar's EVIR system records electronic vehicle inspections. BusFleetAI monitors inspection completion and alerts you when a pre-trip or post-trip inspection has not been filed within your required window.</p></div>
           <div class="card"><h3>Hours of Service Compliance Alerts</h3><p>BusFleetAI reads Zonar HOS data and alerts operations when a driver is approaching or has exceeded their available hours before a violation occurs.</p></div>
           <div class="card"><h3>Excessive Idle Monitoring</h3><p>Zonar captures idle duration and fuel consumption per vehicle. BusFleetAI flags buses idling beyond your defined threshold and includes idle data in the daily summary for driver coaching.</p></div>
           <div class="card"><h3>Route Deviation and Geofence Alerts</h3><p>Using Zonar's zone event data, BusFleetAI detects when a vehicle departs from its assigned route or enters or exits a defined geographic area, and sends an immediate alert to dispatch.</p></div>
         </div>
-        <p style="font-size:1.05rem;line-height:1.8;margin-top:24px;">All services configured to your thresholds and delivered to your recipients by SMS and email. Contact us to discuss which combination fits your fleet.</p>
+        <p style="font-size:1.05rem;line-height:1.8;margin-top:24px;">All services are configured to your thresholds and delivered to your recipients by SMS and email. Contact us to discuss which combination fits your fleet.</p>
       </div>
     </section>
 
