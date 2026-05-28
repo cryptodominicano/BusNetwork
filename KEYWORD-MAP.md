@@ -35,13 +35,9 @@ Commercial intent = service/integration page. Informational intent = blog post. 
 | charter bus safety compliance | 10 | /blog/charter-bus-safety | LIVE | #16 |
 | bus fleet idle time cost | <10 | /blog/bus-fleet-idle-time | LIVE | #18 |
 | saucon tds guide | <10 | /blog/saucon-tds-guide | LIVE | #6 ("tds saucon"), #14 ("saucon my driver log") |
-
-## Broken/Missing Pages
-
-| URL | Issue | Action |
-|-----|-------|--------|
-| /pricing | Linked from every page footer, returns 404 | Create page or remove link |
-| /blog (index) | No blog index page exists | Create hub page listing all posts |
+| DVIR requirements | 90 | /blog/dvir-requirements | LIVE | NEW |
+| FMCSA DVIR requirements | 70 | /blog/dvir-requirements (secondary) | LIVE | NEW |
+| DVIR inspection requirements | 10 | /blog/dvir-requirements (tertiary) | LIVE | NEW |
 
 ---
 

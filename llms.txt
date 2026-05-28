@@ -19,6 +19,7 @@
 
 - [Bus Fleet Management Blog](https://www.busfleetai.com/blog): Blog index page with expert guides on DVIR compliance, driver no-show prevention, charter bus safety, and fleet operations.
 - [What Is DVIR? The Complete Guide for Bus Fleets](https://www.busfleetai.com/blog/what-is-dvir): Everything bus fleet managers need to know about Driver Vehicle Inspection Reports, including federal requirements and compliance.
+- [DVIR Requirements for Bus Fleets](https://www.busfleetai.com/blog/dvir-requirements): FMCSA DVIR requirements for commercial buses including inspection items, penalties, record retention, and compliance automation.
 - [What Happens When a Bus Driver Doesn't Show Up?](https://www.busfleetai.com/blog/bus-driver-no-show): How automated monitoring turns a driver no-show from a service failure into a manageable event.
 - [Charter Bus Safety: The Three Pillars](https://www.busfleetai.com/blog/charter-bus-safety): Driver accountability, speed compliance, and DVIR integrity for charter bus operations.
 - [How Much Is Bus Fleet Idle Time Costing You?](https://www.busfleetai.com/blog/bus-fleet-idle-time): Analysis of idle time costs for bus fleets including diesel waste, engine wear, and compliance risk.
