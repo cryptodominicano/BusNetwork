@@ -112,6 +112,54 @@ End of Month 12 targets: 100+ ranked keywords, 25+ in top 10, 50+ referring doma
 
 ---
 
+## Session: May 28, 2026 — 02:00 UTC
+
+### Session Type
+Month 1 execution: IndexNow submission, Bing URL batch, DVIR cluster content deployment, GEO baseline audit.
+
+### Indexing Actions Completed
+IndexNow bulk submit: 16 URLs accepted (HTTP 200) via api.indexnow.org. Bing URL batch: 16 URLs submitted via SubmitUrlBatch API ({"d":null} success). Bing quota after submit: 84 daily / 384 monthly remaining. Bing sitemap submission via API failed (NotAuthorized on SubmitFeed endpoint), must submit manually from Bing Webmaster dashboard. New /blog/dvir-requirements URL submitted via both IndexNow and Bing batch API separately after DVIR cluster deploy.
+
+### DVIR Cluster Content Deployed (Commit b3dd992)
+/blog/what-is-dvir expanded from ~800 words to 5,000+ words. Six new H2 sections added: vehicle types, pre-trip vs post-trip, penalties with HTML table, electronic vs paper DVIR, state-by-state requirements, DOT compliance review prep. FAQ expanded from 5 to 10 questions. 44 attributed FMCSA/DOT/CFR references.
+
+New blog post /blog/dvir-requirements created: 1,800+ words, full Article + FAQPage + BreadcrumbList schema, 6 FAQ items, 32 attributed regulatory references. Cross-linked to/from what-is-dvir and dvir-compliance. Added to sitemap.xml, llms.txt, blog/index.html.
+
+Site now has 17 live pages and 7 blog posts.
+
+### Microsoft Clarity Deployed
+Clarity tracking snippet (project wxzhvix4ea) added to all 15 HTML pages after GA4 gtag block. Tracking ID stored in master.env as SITE_BUSFLEETAI_CLARITY_TRACKING_ID=wxzhvix4ea.
+
+### GEO Baseline Audit (May 28, 2026)
+
+Tested 5 target prompts via web search (proxy for how search engines and AI models surface results). Results logged below for monthly tracking comparison.
+
+| # | Prompt | BusFleetAI Cited? | Which Pages | Competitor Context |
+|---|--------|-------------------|-------------|-------------------|
+| 1 | "bus fleet monitoring software for charter companies" | NO | Not in results | ezlogz, gitnux, mobisoftinfotech, wifitalents, fitgap, allrideapps, busify dominate |
+| 2 | "how to automate DVIR compliance for bus fleets" | YES | /blog/what-is-dvir | verizonconnect #1, worktrek #2, buscmms #3-6 (4 pages!), busfleetai #7 |
+| 3 | "saucon tds fleet monitoring add-on" | YES (x2) | /saucon-tds, /blog/saucon-tds-guide | saucontds.com official, eyeride comparison page |
+| 4 | "driver no show alert system for bus companies" | NO | Not in results | safefleet (hardware), saferwatchapp, protrantechnology, childcheckmate dominate. Results skew toward physical alert devices, not fleet software. |
+| 5 | "best fleet monitoring software for private bus companies" | NO | Not in results | ezlogz, wifitalents, zipdo, fitgap, matrackinc, buscmms dominate |
+
+### GEO Baseline Summary
+Cited: 2 of 5 prompts (40%)
+Strong: Saucon TDS queries (double citation), DVIR content (post-expansion)
+Weak: Broad "fleet monitoring software" queries (no citation), "driver no show" queries (search engines interpret as physical alert hardware, not software)
+Key competitor: BusCMMS appears in 4 results across 2 prompts with deep content. They are the strongest organic competitor in the DVIR/compliance space.
+
+### Observations
+Prompt 4 ("driver no show alert system") returns results about physical bus safety devices and passenger no-show policies, not fleet management software. The keyword intent is misaligned. The /driver-no-show-alerts page needs to differentiate itself by targeting "bus driver no show notification software" or "driver attendance monitoring for bus fleets" instead.
+
+BusCMMS has published 5+ blog posts specifically about DVIR and DOT compliance in the last 4 months. They are actively building topical authority in our strongest content cluster. The DVIR expansion and new dvir-requirements post are direct competitive responses.
+
+### Priority Actions (Updated)
+1. Submit sitemap manually in Bing Webmaster dashboard (API auth failed)
+2. Begin directory backlink campaign: LinkedIn company page, Crunchbase, Capterra, G2
+3. Consider retargeting /driver-no-show-alerts keyword to "bus driver attendance monitoring software" or similar (search intent mismatch on current keyword)
+4. Next GEO audit: June 30, 2026
+
+
 ## Session: May 27, 2026 — 22:00 UTC
 
 ### Session Type
