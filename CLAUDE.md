@@ -41,6 +41,7 @@ Single contact form on index.html (#contact section). All subpage CTAs link to /
 1. Read WEEKLY-INTEL.md for current state before doing anything.
 2. DataForSEO calls always via VPS infra-mcp exec_command — never from Claude sandbox (blocked).
 3. KEYWORD-MAP.md contains all page-to-keyword assignments and the SERP sweep baseline. Reference it for all content decisions.
+3a. WEEKLY-INTEL.md contains the 12-month SEO/GEO domination plan (June 2026 through May 2027). Reference it for phase-appropriate actions. Current phase: Month 1 (Foundation + Indexing Push).
 4. At session end when findings exist: push timestamped block to WEEKLY-INTEL.md via GitHub API.
 5. Token in master.env on VPS. Format: "## Session: [Month DD, YYYY — HH:MM UTC]".
 
