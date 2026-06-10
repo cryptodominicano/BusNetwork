@@ -3,6 +3,55 @@
 This file is the persistent memory layer for the SEO orchestrator. It is read at the start of every session alongside CLAUDE.md. Each session's findings are prepended so the most recent entry is always first. Never delete old entries. Format for each entry: ## Session: [Month DD, YYYY — HH:MM UTC]
 
 ---
+## Session: June 10, 2026 — 22:45 UTC
+
+### Session Type
+Vercel + SEO infrastructure audit and fix. 7-point checklist matching darioamadorperez.com audit pattern.
+
+### Audit Results
+
+| # | Check | Finding | Action |
+|---|-------|---------|--------|
+| 1 | .vercel.app alias redirect | bus-network-two.vercel.app returned HTTP 200 with full site content (duplicate content risk) | FIXED: patched via Vercel API to 308 → www.busfleetai.com |
+| 2 | Security headers | X-XSS-Protection missing. X-Frame-Options was DENY (should be SAMEORIGIN). All other headers present. | FIXED: added X-XSS-Protection: 1; mode=block, changed X-Frame-Options to SAMEORIGIN in vercel.json |
+| 3 | Cache-Control / X-Vercel-Cache | X-Vercel-Cache: HIT confirmed on www. CDN caching is active. No action needed. | PASS |
+| 4 | Preview URL noindex | Per-commit preview deployments return X-Robots-Tag: noindex (HTTP 401 + noindex). Confirmed safe. | PASS |
+| 5 | HSTS | Strict-Transport-Security: max-age=63072000; includeSubDomains; preload confirmed on www. | PASS |
+| 6 | og:image stability | All pages use self-hosted /assets/open-graph.png on www.busfleetai.com. No third-party CDN URLs. | PASS |
+| 7 | Canonical chain | Apex was 307 → www (should be 308). www returns 200. All canonicals self-referencing www domain. | FIXED: patched apex domain via Vercel API to 308 → www.busfleetai.com |
+
+### Changes Deployed
+
+**Commit f9820e0a** — vercel.json updated:
+- Added X-XSS-Protection: 1; mode=block
+- Changed X-Frame-Options from DENY to SAMEORIGIN
+- Added redirects block (host-conditional apex 308 rule — superseded by Vercel API patch below)
+
+**Vercel API patches (no deploy needed, instant):**
+- bus-network-two.vercel.app: 308 redirect → www.busfleetai.com
+- busfleetai.com apex domain: redirectStatusCode patched from null (307) to 308
+
+### Final Verified Header State (www.busfleetai.com)
+
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-XSS-Protection: 1; mode=block
+X-Vercel-Cache: HIT
+HTTP/2 200
+
+### Final Verified Redirect Chain
+
+busfleetai.com → HTTP 308 → https://www.busfleetai.com/ ✓
+bus-network-two.vercel.app → HTTP 308 → https://www.busfleetai.com/ ✓
+www.busfleetai.com → HTTP 200 ✓
+Per-commit preview URLs → HTTP 401 + X-Robots-Tag: noindex ✓
+
+---
+
+
 
 ## 12-Month SEO/GEO Domination Plan (June 2026 through May 2027)
 
